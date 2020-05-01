@@ -6,10 +6,61 @@
 
 body
     background-color: #eee
+    font-family: lato
+    color: #003f8a
+
+h1
+    background-color: #0069D9
+    color: white
+    padding: 20px
+    border: 3px solid white
+    border-radius: 20px
+
+input
+    border-radius: 5px
+    border-color: #0069D9
+    border-bottom: 0px
+    border-right: 0px
+
+.btn
+    margin-left: 20px
+
+.new-wheel
+    display: none
+    opacity: 0
+    transition: 0.5s
+
+.wheel-type
+    label
+        margin: 0 5px 10px 5px
+        input
+            margin: 0 5px
+
+.nameInputs
+    display: flex
+    margin: 0px auto
+    width: 80%
+    max-width: 1100px
+    padding: 20px
+    flex-wrap: wrap
+    justify-content: center
+
+    div
+        display: flex
+        width: 500px
+        align-items: baseline
+        justify-content: center
+
+        label
+            padding: 0 5px
+
+        .inputHowMany
+            width: 45px
 
 .canvasContainer
     display: flex
     justify-content: center
+    margin: 20px
 
 canvas
     // display: none
@@ -19,24 +70,3 @@ canvas
     transition: 4s
     border: 5px dotted black
     border-radius: 50%
-
-.nameInputs
-    display: flex
-    margin: auto
-    width: 80%
-    max-width: 1000px
-    padding: 20px
-    flex-wrap: wrap
-    justify-content: center
-
-    div
-        display: flex
-        width: 50%
-        // border: 2px solid red
-        align-items: baseline
-
-        label
-            padding-right: 5px
-
-        .inputHowMany
-            width: 45px

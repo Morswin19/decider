@@ -1,11 +1,15 @@
 let wheelDeg = 0;
 const piecesInput = document.querySelector('.piecesForm input');
 const piecesSubmit = document.querySelector('.piecesForm button');
+const newWheelBtn = document.querySelector('.new-wheel');
 const nameInputs = document.querySelector('.nameInputs');
+const radioNot = document.querySelector('#notCut');
+const radioYes = document.querySelector('#elementCut');
+console.log(radioNot, radioYes);
 let pieces = 0;
 let names = nameInputs.querySelectorAll('input')
 let amounts = nameInputs.querySelectorAll('inputHowMany');
-let namesSubmit = nameInputs.querySelector('button')
+let namesSubmit = document.querySelector('.btn-success')
 let wheelNames = [];
 let randomNumbers = [];
 let randomNames = [];
@@ -13,6 +17,9 @@ let color = [];
 let elementCut = true;
 
 const addInputs = () => {
+    piecesSubmit.setAttribute('disabled', true);
+    newWheelBtn.style.display = 'inline-block';
+    newWheelBtn.style.opacity = '1';
     pieces = piecesInput.value;
     for (i = 1; i <= pieces; i++) {
         const div = document.createElement('div');
@@ -35,13 +42,14 @@ const addInputs = () => {
         div.appendChild(input2);
     }
     const button = document.createElement('button');
-    button.className = 'btn btn-primary';
+    button.className = 'btn btn-info names-submit';
     button.appendChild(document.createTextNode('Submit'));
-    nameInputs.appendChild(button);
+    nameInputs.parentNode.appendChild(button);
+    button.style.marginBottom = '10px';
     names = nameInputs.querySelectorAll('.nameInput');
     amounts = nameInputs.querySelectorAll('.inputHowMany');
-    namesSubmit = nameInputs.querySelector('button');
-    if (!elementCut) {
+    namesSubmit = document.querySelector('.names-submit');
+    if (radioYes.checked == false) {
         namesSubmit.addEventListener('click', constructWheelWithoutCut);
     } else {
         namesSubmit.addEventListener('click', constructWheelWithCut)
@@ -216,4 +224,7 @@ const constructWheelWithCut = () => {
 
 }
 
+
+
 piecesSubmit.addEventListener('click', addInputs);
+newWheelBtn.addEventListener('click', () => location.reload());

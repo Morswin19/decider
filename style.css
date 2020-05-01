@@ -8,35 +8,51 @@
 
 body {
   background-color: #eee;
+  font-family: lato;
+  color: #003f8a;
 }
 
-.canvasContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-canvas {
+h1 {
+  background-color: #0069D9;
+  color: white;
   padding: 20px;
-  background-color: #ccc;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 4s;
-  transition: 4s;
-  border: 5px dotted black;
-  border-radius: 50%;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+
+input {
+  border-radius: 5px;
+  border-color: #0069D9;
+  border-bottom: 0px;
+  border-right: 0px;
+}
+
+.btn {
+  margin-left: 20px;
+}
+
+.new-wheel {
+  display: none;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.wheel-type label {
+  margin: 0 5px 10px 5px;
+}
+
+.wheel-type label input {
+  margin: 0 5px;
 }
 
 .nameInputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
+  margin: 0px auto;
   width: 80%;
-  max-width: 1000px;
+  max-width: 1100px;
   padding: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -49,17 +65,41 @@ canvas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 500px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nameInputs div label {
-  padding-right: 5px;
+  padding: 0 5px;
 }
 
 .nameInputs div .inputHowMany {
   width: 45px;
+}
+
+.canvasContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+}
+
+canvas {
+  padding: 20px;
+  background-color: #ccc;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 4s;
+  transition: 4s;
+  border: 5px dotted black;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
