@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wheel_Of_Fortune</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Wheel Of Fortune</h1>
+    <form class='piecesForm' action="#">
+        <label for="howMany">How Many Parts</label>
+        <input type="number" min='2' max='30' placeholder='2' value='2'>
+        <button class='btn btn-success'>submit</button>
+    </form>
+    <form class='nameInputs' action="#">
+    </form>
+    <div class="container">
+        <button type="button" class="btn btn-primary" onClick='handleClick()'>Click</button>
+        <div class='canvasContainer'>
+            <canvas width="600" height="600"></canvas>
+        </div>
+        <div class='actual'>
+        </div>
+        <script src="app.js"></script>
+    </div>
+</body>
+
+</html>
