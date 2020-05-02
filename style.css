@@ -31,6 +31,11 @@ input {
   margin-left: 20px;
 }
 
+.piecesForm > div > label {
+  padding-right: 5px;
+  font-weight: 600;
+}
+
 .new-wheel {
   display: none;
   opacity: 0;
@@ -38,12 +43,16 @@ input {
   transition: 0.5s;
 }
 
+.wheel-type {
+  font-weight: 600;
+}
+
 .wheel-type label {
   margin: 0 5px 10px 5px;
 }
 
 .wheel-type label input {
-  margin: 0 5px;
+  margin: 0 5px 20px;
 }
 
 .nameInputs {
@@ -82,7 +91,20 @@ input {
   width: 45px;
 }
 
-.canvasContainer {
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  font-weight: 600;
+  border: 2px solid lawngreen;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+}
+
+.container .canvasContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,9 +112,19 @@ input {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 20px;
+  position: relative;
 }
 
-canvas {
+.container .canvasContainer .fa-galactic-senate {
+  position: absolute;
+  top: calc(50% - 24px);
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  right: -46px;
+  z-index: 5;
+}
+
+.container .canvasContainer canvas {
   padding: 20px;
   background-color: #ccc;
   -webkit-transform: rotate(0deg);
@@ -101,5 +133,24 @@ canvas {
   transition: 4s;
   border: 5px dotted black;
   border-radius: 50%;
+}
+
+.container .actual {
+  width: 30%;
+}
+
+.container .actual .drawnElementsList {
+  list-style: none;
+  font-size: 25px;
+}
+
+.container .actual .drawnElementsList li:first-child {
+  font-size: 25px;
+}
+
+.container .actual .drawnElementsList li {
+  border-bottom: 2px solid #0069D9;
+  padding-top: 10px;
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */

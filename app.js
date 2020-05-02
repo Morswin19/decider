@@ -1,20 +1,23 @@
-let wheelDeg = 0;
 const piecesInput = document.querySelector('.piecesForm input');
 const piecesSubmit = document.querySelector('.piecesForm button');
+const piecesDiv = document.querySelector('.piecesForm div');
 const newWheelBtn = document.querySelector('.new-wheel');
 const nameInputs = document.querySelector('.nameInputs');
 const radioNot = document.querySelector('#notCut');
 const radioYes = document.querySelector('#elementCut');
-console.log(radioNot, radioYes);
-let pieces = 0;
 let names = nameInputs.querySelectorAll('input')
 let amounts = nameInputs.querySelectorAll('inputHowMany');
-let namesSubmit = document.querySelector('.btn-success')
+let namesSubmit = document.querySelector('.names-submit');
+const wheelContainer = document.querySelector('.container');
+const startWheel = document.querySelector('.btn-danger');
+const drawnElementsList = document.querySelector('.drawnElementsList');
+let wheelDeg = 0;
+let pieces = 0;
 let wheelNames = [];
 let randomNumbers = [];
 let randomNames = [];
 let color = [];
-let elementCut = true;
+let drawnElements = [];
 
 const addInputs = () => {
     piecesSubmit.setAttribute('disabled', true);
@@ -49,88 +52,15 @@ const addInputs = () => {
     names = nameInputs.querySelectorAll('.nameInput');
     amounts = nameInputs.querySelectorAll('.inputHowMany');
     namesSubmit = document.querySelector('.names-submit');
-    if (radioYes.checked == false) {
-        namesSubmit.addEventListener('click', constructWheelWithoutCut);
-    } else {
-        namesSubmit.addEventListener('click', constructWheelWithCut)
-    }
-}
-
-const constructWheelWithoutCut = () => {
-    names.forEach((name, index) => {
-        for (i = 1; i <= amounts[index].value; i++) {
-            const number = Math.floor(Math.random() * 1000);
-            randomNames.push(number + '&8&' + name.value)
-            randomNames = randomNames.sort();
-            wheelNames = randomNames.map(name => {
-                let index = name.indexOf('&8&')
-                return name.slice(index + 3);
-            }
-            )
-        }
-    });
-    for (i = 1; i <= wheelNames.length; i++) {
-
-    }
-    console.log(wheelNames);
-    console.log(amounts);
-    if (wheelNames.length % 7 == 1) {
-        color = ['#ffed00', 'azure', '#00fff0', '#F8766D', '#00C19C', '#FF62BC'];
-    } else {
-        color = ['#ffed00', 'azure', '#00fff0', '#F8766D', '#00C19C', '#FF62BC', '#FC717F'];
-    }
-    // const workersNames = workers.map(person => person.name);
-    const slices = wheelNames.length;
-    const sliceDeg = 360 / slices;
-    let deg = 0;
-    const canvas = document.querySelector('canvas');
-    const ctx = canvas.getContext('2d');
-    const width = canvas.width;
-    const center = width / 2;
-    function deg2rad(deg) { return deg * Math.PI / 180; }
-
-    function drawSlice(deg, color) {
-        ctx.beginPath();
-        ctx.fillStyle = color;
-        ctx.moveTo(center, center);
-        ctx.arc(center, center, width / 2, deg2rad(deg), deg2rad(deg + sliceDeg));
-        ctx.lineTo(center, center);
-        ctx.fill();
-    }
-
-    function drawText(deg, text) {
-        ctx.save();
-        ctx.translate(center, center);
-        ctx.rotate(deg2rad(deg));
-        ctx.textAlign = "left";
-        ctx.fillStyle = "#003f8a";
-        ctx.font = 'bold 30px sans-serif';
-        ctx.strokeStyle = "#FF0000"
-        ctx.fillText(text, 120, 10);
-        ctx.restore();
-    }
-
-    for (var i = 0; i < slices; i++) {
-        drawSlice(deg, color[(i % color.length)]);
-        drawText(deg + sliceDeg / 2, wheelNames[i]);
-        deg += sliceDeg;
-    }
-
-    handleClick = () => {
-        console.log('Hello Guinea Pig');
-        const deg = Math.floor(Math.random() * 3000);
-        if (deg < 360) {
-            return this.handleClick();
-        }
-        console.log(deg);
-        wheelDeg = wheelDeg + deg
-        const canvas = document.querySelector('canvas')
-        canvas.style.transform = `rotate(${wheelDeg}deg)`
-    }
+    namesSubmit.addEventListener('click', constructWheelWithCut)
 }
 
 const constructWheelWithCut = () => {
-    console.log('Hello Guinea Pig')
+    wheelContainer.style.display = 'flex';
+    namesSubmit.parentElement.style.display = 'none';
+    piecesDiv.style.display = 'none';
+    piecesSubmit.style.display = 'none';
+    namesSubmit.disabled = 'true';
     names.forEach((name, index) => {
         for (i = 1; i <= amounts[index].value; i++) {
             const number = Math.floor(Math.random() * 1000);
@@ -144,17 +74,11 @@ const constructWheelWithCut = () => {
         }
     });
 
-    if (wheelNames.length % 7 == 1) {
-        color = ['#ffed00', 'azure', '#00fff0', '#F8766D', '#00C19C', '#FF62BC'];
-    } else {
-        color = ['#ffed00', 'azure', '#00fff0', '#F8766D', '#00C19C', '#FF62BC', '#FC717F'];
-    }
-
     wheelEngine = () => {
-        if (wheelNames.length % 7 == 1) {
-            color = ['#ffed00', 'azure', '#00fff0', '#F8766D', '#00C19C', '#FF62BC'];
+        if (wheelNames.length % 10 == 1) {
+            color = ['#f40552', '#c3edea', '#fc7e2f', '#f8f3eb', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#f4eeff', '#ffd868', '#baf1a1'];
         } else {
-            color = ['#ffed00', 'azure', '#00fff0', '#F8766D', '#00C19C', '#FF62BC', '#FC717F'];
+            color = ['#f40552', '#c3edea', '#fc7e2f', '#f8f3eb', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#f4eeff', '#ffd868'];
         }
         const slices = wheelNames.length;
         const sliceDeg = 360 / slices;
@@ -191,6 +115,20 @@ const constructWheelWithCut = () => {
             drawText(deg + sliceDeg / 2, wheelNames[i]);
             deg += sliceDeg;
         }
+
+        showDrawnElementsList = () => {
+            const listElements = drawnElementsList.querySelectorAll('li');
+            if (listElements.length > 0) {
+                listElements.forEach(element => element.remove());
+            }
+            for (i = 0; i < drawnElements.length; i++) {
+                const li = document.createElement('li');
+                li.innerHTML = drawnElements[i];
+                drawnElementsList.appendChild(li);
+            }
+        }
+
+        showDrawnElementsList()
     }
 
     wheelEngine();
@@ -200,31 +138,37 @@ const constructWheelWithCut = () => {
         if (deg < 360) {
             return this.handleClick();
         }
-        // console.log(wheelNames);
-        // console.log(deg);
         wheelDeg = wheelDeg + deg
-        // console.log(wheelDeg);
         const canvas = document.querySelector('canvas')
         canvas.style.transform = `rotate(${wheelDeg}deg)`;
-        setTimeout(() => elementCut(), 7000);
+        startWheel.disabled = 'true';
+        let degLeft = wheelDeg % 360;
+        let oneSlice = 360 / wheelNames.length;
+        const drawnElement = wheelNames.filter((name, index) => (index * oneSlice < (360 - degLeft)) && ((index + 1) * oneSlice >= (360 - degLeft)))
+        if (drawnElement[0] !== undefined) {
+            drawnElements.unshift(drawnElement[0]);
+        }
+        if (radioYes.checked == true) {
+            setTimeout(() => elementCut(), 7000);
+        } else {
+            setTimeout(() => {
+                (startWheel.removeAttribute('disabled'));
+                wheelEngine();
+            }, 5000)
+        }
     }
 
     elementCut = () => {
+        startWheel.removeAttribute('disabled')
         let degLeft = wheelDeg % 360;
-        // console.log(degLeft);
         let oneSlice = 360 / wheelNames.length;
         const nameToCut = wheelNames.filter((name, index) => (index * oneSlice < (360 - degLeft)) && ((index + 1) * oneSlice >= (360 - degLeft)))
-        // console.log(nameToCut);
         const index = wheelNames.indexOf(nameToCut[0]);
-        // console.log('index:', index);
         wheelNames.splice(index, 1);
-        // console.log(wheelNames);
         wheelEngine();
     }
-
 }
-
-
 
 piecesSubmit.addEventListener('click', addInputs);
 newWheelBtn.addEventListener('click', () => location.reload());
+

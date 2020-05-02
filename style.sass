@@ -25,16 +25,22 @@ input
 .btn
     margin-left: 20px
 
+.piecesForm
+    &>div>label
+        padding-right: 5px
+        font-weight: 600
+
 .new-wheel
     display: none
     opacity: 0
     transition: 0.5s
 
 .wheel-type
+    font-weight: 600
     label
         margin: 0 5px 10px 5px
         input
-            margin: 0 5px
+            margin: 0 5px 20px
 
 .nameInputs
     display: flex
@@ -57,16 +63,47 @@ input
         .inputHowMany
             width: 45px
 
-.canvasContainer
+.container
     display: flex
-    justify-content: center
-    margin: 20px
+    margin-top: 30px
+    font-weight: 600
+    border: 2px solid lawngreen
+    justify-content: space-between
+    min-height: 100vh
 
-canvas
-    // display: none
-    padding: 20px
-    background-color: #ccc
-    transform: rotate(0deg)
-    transition: 4s
-    border: 5px dotted black
-    border-radius: 50%
+    .canvasContainer
+        display: flex
+        justify-content: center
+        margin: 20px
+        position: relative
+
+        .fa-galactic-senate
+            position: absolute
+            top: calc(50% - 24px)
+            transform: rotate(270deg)
+            right: -46px
+            z-index: 5
+
+        canvas
+            padding: 20px
+            background-color: #ccc
+            transform: rotate(0deg)
+            transition: 4s
+            border: 5px dotted black
+            border-radius: 50%
+
+    .actual
+        width: 30%
+        // border: 2px solid red
+
+        .drawnElementsList
+            list-style: none
+            font-size: 25px
+
+            li:first-child
+                font-size: 25px
+
+            li
+                border-bottom: 2px solid #0069D9
+                padding-top: 10px
+                font-size: 15px

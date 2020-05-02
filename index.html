@@ -5,23 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Wheel_Of_Fortune</title>
+    <title>Wheel Of Fortune</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
         rel="stylesheet">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
+    <script src="https://kit.fontawesome.com/2bbde87d82.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <h1>Wheel Of Fortune</h1>
     <form class='piecesForm' action="#">
-        <label for="howMany">how many names:</label>
-        <input type="number" min='2' max='30' placeholder='2' value='2'>
-        <div class='wheel-type'>
-            <p>do you want to remove the drawn items from the board?</p>
-            <label for="elementCut"><input type="radio" name="elementCut" id="elementCut" checked>YES</label>
-            <label for="notCut"><input type="radio" name="elementCut" id="notCut">NO</label>
+        <div>
+            <label for="howMany">how many names:</label>
+            <input type="number" min='2' max='30' placeholder='2' value='2'>
+            <div class='wheel-type'>
+                <p>remove drawn items from the board?</p>
+                <label for="elementCut"><input type="radio" name="elementCut" id="elementCut" checked>YES</label>
+                <label for="notCut"><input type="radio" name="elementCut" id="notCut">NO</label>
+            </div>
         </div>
         <button class='btn btn-success'>submit</button>
         <button class='btn btn-primary new-wheel'>new wheel</button>
@@ -30,15 +35,22 @@
         <form class='nameInputs' action="#">
         </form>
     </div>
-    <div class="container">
-        <button type="button" class="btn btn-danger" onClick='handleClick()'>Start wheel</button>
-        <div class='canvasContainer'>
-            <canvas width="600" height="600"></canvas>
+    <div class='container'>
+        <div class="wheelContainer">
+            <button type="button" class="btn btn-danger" onClick='handleClick()'>start wheel</button>
+            <div class='canvasContainer'>
+                <canvas width="600" height="600"></canvas>
+                <span style="font-size: 48px; color: goldenrod;">
+                    <i class="fab fa-galactic-senate"></i>
+                </span>
+            </div>
         </div>
         <div class='actual'>
+            <h2>drawn elements<span>(0)</span></h2>
+            <ul class='drawnElementsList'></ul>
         </div>
-        <script src="app.js"></script>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
