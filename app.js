@@ -62,6 +62,7 @@ const addInputs = () => {
 
 // main function to construct wheel from parts input
 const constructWheelWithCut = () => {
+    startWheel.removeAttribute('disabled');
     wheelContainer.style.display = 'flex';
     namesSubmit.parentElement.style.display = 'none';
     piecesDiv.style.display = 'none';

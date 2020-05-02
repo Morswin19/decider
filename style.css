@@ -111,11 +111,11 @@ input {
   position: relative;
 }
 
-.container .canvasContainer .fa-galactic-senate {
+.container .canvasContainer img {
+  width: 80px;
+  height: 20px;
   position: absolute;
-  top: calc(50% - 24px);
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+  top: calc(50% - 10px);
   z-index: 5;
 }
 
