@@ -38,9 +38,6 @@ input {
 
 .new-wheel {
   display: none;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .wheel-type {
@@ -97,7 +94,6 @@ input {
   display: flex;
   margin-top: 30px;
   font-weight: 600;
-  border: 2px solid lawngreen;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -120,7 +116,6 @@ input {
   top: calc(50% - 24px);
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
-  right: -46px;
   z-index: 5;
 }
 
@@ -137,6 +132,10 @@ input {
 
 .container .actual {
   width: 30%;
+}
+
+.container .actual span {
+  padding-left: 10px;
 }
 
 .container .actual .drawnElementsList {

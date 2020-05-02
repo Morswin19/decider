@@ -1,3 +1,4 @@
+//DOM variables
 const piecesInput = document.querySelector('.piecesForm input');
 const piecesSubmit = document.querySelector('.piecesForm button');
 const piecesDiv = document.querySelector('.piecesForm div');
@@ -11,19 +12,23 @@ let namesSubmit = document.querySelector('.names-submit');
 const wheelContainer = document.querySelector('.container');
 const startWheel = document.querySelector('.btn-danger');
 const drawnElementsList = document.querySelector('.drawnElementsList');
+const countSpan = document.querySelector('.actual span');
+
+//other variables
 let wheelDeg = 0;
-let pieces = 0;
 let wheelNames = [];
 let randomNumbers = [];
 let randomNames = [];
 let color = [];
 let drawnElements = [];
+let startCount = 0;
 
+//add inputs after submit wheel type and parts amount
 const addInputs = () => {
     piecesSubmit.setAttribute('disabled', true);
     newWheelBtn.style.display = 'inline-block';
-    newWheelBtn.style.opacity = '1';
-    pieces = piecesInput.value;
+    const pieces = piecesInput.value;
+    //elements for every part
     for (i = 1; i <= pieces; i++) {
         const div = document.createElement('div');
         div.className = 'nameDiv';
@@ -55,6 +60,7 @@ const addInputs = () => {
     namesSubmit.addEventListener('click', constructWheelWithCut)
 }
 
+// main function to construct wheel from parts input
 const constructWheelWithCut = () => {
     wheelContainer.style.display = 'flex';
     namesSubmit.parentElement.style.display = 'none';
@@ -74,6 +80,7 @@ const constructWheelWithCut = () => {
         }
     });
 
+    //construct wheel in canvas
     wheelEngine = () => {
         if (wheelNames.length % 10 == 1) {
             color = ['#f40552', '#c3edea', '#fc7e2f', '#f8f3eb', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#f4eeff', '#ffd868', '#baf1a1'];
@@ -154,10 +161,13 @@ const constructWheelWithCut = () => {
             setTimeout(() => {
                 (startWheel.removeAttribute('disabled'));
                 wheelEngine();
+                startCount++;
+                countSpan.innerHTML = `(${startCount})`;
             }, 5000)
         }
     }
 
+    //function to cutting elements in remove element version
     elementCut = () => {
         startWheel.removeAttribute('disabled')
         let degLeft = wheelDeg % 360;
@@ -165,6 +175,8 @@ const constructWheelWithCut = () => {
         const nameToCut = wheelNames.filter((name, index) => (index * oneSlice < (360 - degLeft)) && ((index + 1) * oneSlice >= (360 - degLeft)))
         const index = wheelNames.indexOf(nameToCut[0]);
         wheelNames.splice(index, 1);
+        startCount++;
+        countSpan.innerHTML = `(${startCount})`;
         wheelEngine();
     }
 }
