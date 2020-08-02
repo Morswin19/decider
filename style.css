@@ -8,16 +8,26 @@
 
 body {
   background-color: azure;
-  font-family: lato;
+  font-family: 'Manrope', sans-serif;
   color: #003f8a;
 }
 
+#wheelSide {
+  background-color: #F7F9FC;
+}
+
+#wheelSide #titleContainer {
+  height: 100vh;
+}
+
 h1 {
-  background-color: #0069D9;
-  color: white;
-  padding: 20px;
-  border: 3px solid white;
-  border-radius: 20px;
+  width: 1000px;
+  font-size: 90px;
+  text-align: left;
+}
+
+#textSide {
+  background-color: rgba(114, 107, 0, 0.15);
 }
 
 input {
@@ -88,7 +98,7 @@ input {
   width: 45px;
 }
 
-.container {
+.container2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,9 +108,10 @@ input {
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 100vh;
+  width: 1500px;
 }
 
-.container .canvasContainer {
+.container2 .canvasContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,7 +122,7 @@ input {
   position: relative;
 }
 
-.container .canvasContainer img {
+.container2 .canvasContainer img {
   width: 80px;
   height: 20px;
   position: absolute;
@@ -119,7 +130,7 @@ input {
   z-index: 5;
 }
 
-.container .canvasContainer canvas {
+.container2 .canvasContainer canvas {
   padding: 20px;
   background-color: #ccc;
   -webkit-transform: rotate(0deg);
@@ -130,24 +141,24 @@ input {
   border-radius: 50%;
 }
 
-.container .actual {
+.container2 .actual {
   width: 30%;
 }
 
-.container .actual span {
+.container2 .actual span {
   padding-left: 10px;
 }
 
-.container .actual .drawnElementsList {
+.container2 .actual .drawnElementsList {
   list-style: none;
   font-size: 25px;
 }
 
-.container .actual .drawnElementsList li:first-child {
+.container2 .actual .drawnElementsList li:first-child {
   font-size: 25px;
 }
 
-.container .actual .drawnElementsList li {
+.container2 .actual .drawnElementsList li {
   border-bottom: 2px solid #0069D9;
   padding-top: 10px;
   font-size: 15px;
