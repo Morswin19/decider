@@ -1,4 +1,8 @@
 //variables
+$cone: #003f8a
+$ctwo:  #726B00
+$cthree: #F7F9FC
+$cfour: #F4F4F3
     
 *
     margin: 0
@@ -9,20 +13,40 @@
 body
     background-color: azure
     font-family: 'Manrope', sans-serif
-    color: #003f8a
+    color: $cone
 
 #wheelSide
-    background-color: #F7F9FC
+    background-color: $cthree
     #titleContainer
         height: 100vh
 
-h1
-    width: 1000px
-    font-size: 90px
-    text-align: left
+    h1
+        width: 1000px
+        font-size: 90px
+        text-align: left
+
+h2
+    color: 
+
+#backgroundText
+    position: absolute
 
 #textSide
-    background-color: rgba(#726B00, 0.15)
+    background-color: rgba($ctwo, 0.15)
+    color: $ctwo
+
+    >div
+        width: 419px
+        margin-top: 470px
+        h1
+            font-size: 40px
+        #inputs
+            input
+                height: 50px
+                border-radius: 15px
+                background-color: $cfour
+
+
 
 // h1
 //     background-color: #0069D9
@@ -31,14 +55,13 @@ h1
 //     border: 3px solid white
 //     border-radius: 20px
 
-input
-    border-radius: 5px
-    border-color: #0069D9
-    border-bottom: 0px
-    border-right: 0px
+// input
+//     border-radius: 5px
+//     border-color: #0069D9
+//     border-bottom: 0px
+//     border-right: 0px
 
-.btn
-    margin-left: 20px
+
 
 .piecesForm
     &>div>label

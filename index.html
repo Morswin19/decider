@@ -16,7 +16,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -27,16 +28,27 @@
                     <h1 class=" mt-5 pt-5  text-uppercase">Struggling to make
                         a decision?</h1>
                 </div>
+                <div id="backgroundText">Decider</div>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ut accusantium, nobis repellendus
-                    itaque ab beatae quam sit eligendi quia vero porro voluptate natus maiores dolor iste suscipit
-                    consequatur ex!</p>
+                <h5>Enter your options and let the fate decide for you!</h5>
             </div>
-            <div id="textSide" class="col-xl-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                voluptas deleniti
-                quis, voluptate voluptatibus id natus voluptates amet ipsa nisi dolores animi sint laboriosam dolorem
-                harum? Culpa sint nesciunt fugiat, error itaque quae magnam magni, neque eos animi temporibus delectus
-                quod obcaecati, voluptatem eveniet libero incidunt amet beatae? Quisquam, obcaecati!</div>
+            <div id="textSide" class="col-xl-5">
+                <div class="text-center">
+                    <h1 class="text-uppercase font-weight-bold mb-5">Choose between:</h1>
+                    <div class="d-flex flex-md-column">
+                        <div id="inputs" class="d-flex flex-column">
+                            <input class="mb-5" type="number" min='2' max='30' placeholder='2' value='2'>
+                            <input class="mb-5" type="number" min='2' max='30' placeholder='2' value='2'>
+                        </div>
+                        <i class="fa fa-plus"></i>
+                        <span>Add more</span>
+                        <h5 class="text-uppercase">Choose one option <span class="font-weight-bold">multiple</span>
+                            times?
+                        </h5>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
     <h1>Wheel Of Fortune</h1>

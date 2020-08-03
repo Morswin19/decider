@@ -20,25 +20,34 @@ body {
   height: 100vh;
 }
 
-h1 {
+#wheelSide h1 {
   width: 1000px;
   font-size: 90px;
   text-align: left;
 }
 
+#backgroundText {
+  position: absolute;
+}
+
 #textSide {
   background-color: rgba(114, 107, 0, 0.15);
+  color: #726B00;
 }
 
-input {
-  border-radius: 5px;
-  border-color: #0069D9;
-  border-bottom: 0px;
-  border-right: 0px;
+#textSide > div {
+  width: 419px;
+  margin-top: 470px;
 }
 
-.btn {
-  margin-left: 20px;
+#textSide > div h1 {
+  font-size: 40px;
+}
+
+#textSide > div #inputs input {
+  height: 50px;
+  border-radius: 15px;
+  background-color: #F4F4F3;
 }
 
 .piecesForm > div > label {
