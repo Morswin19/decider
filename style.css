@@ -4,40 +4,57 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
+  color: #726B00;
 }
 
 body {
   background-color: azure;
   font-family: 'Manrope', sans-serif;
   color: #003f8a;
+  text-align: left;
 }
 
 #wheelSide {
   background-color: #F7F9FC;
+  position: relative;
+}
+
+#wheelSide #backgroundText img {
+  color: black;
 }
 
 #wheelSide #titleContainer {
   height: 100vh;
 }
 
-#wheelSide h1 {
+#wheelSide #titleContainer h1 {
   width: 1000px;
   font-size: 90px;
   text-align: left;
 }
 
-#backgroundText {
-  position: absolute;
+#wheelSide #titleContainer h5 {
+  text-align: left;
+}
+
+#wheelSide #titleContainer #wheel {
+  min-width: 750px;
+  min-height: 750px;
+  width: 750px;
+  heigth: 750px;
+  background-color: #A2B4C6;
 }
 
 #textSide {
   background-color: rgba(114, 107, 0, 0.15);
   color: #726B00;
+  padding-left: 100px;
 }
 
 #textSide > div {
   width: 419px;
   margin-top: 470px;
+  text-align: center;
 }
 
 #textSide > div h1 {
@@ -48,195 +65,58 @@ body {
   height: 50px;
   border-radius: 15px;
   background-color: #F4F4F3;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 20px;
 }
 
-.piecesForm > div > label {
-  padding-right: 5px;
-  font-weight: 600;
+#textSide > div #inputs input::-webkit-input-placeholder {
+  color: #A2B4C6;
 }
 
-.new-wheel {
-  display: none;
+#textSide > div #inputs input:-ms-input-placeholder {
+  color: #A2B4C6;
 }
 
-.wheel-type {
-  font-weight: 600;
+#textSide > div #inputs input::-ms-input-placeholder {
+  color: #A2B4C6;
 }
 
-.wheel-type label {
-  margin: 0 5px 10px 5px;
+#textSide > div #inputs input::placeholder {
+  color: #A2B4C6;
 }
 
-.wheel-type label input {
-  margin: 0 5px 20px;
+#textSide > div .fa {
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  background: #726B00;
+  color: #F7F9FC;
+  margin-left: 30px;
+  font-size: 40px;
+  font-weight: 300;
 }
 
-.nameInputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0px auto;
-  width: 80%;
-  max-width: 1100px;
-  padding: 20px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+#textSide #multiple {
+  width: 574px;
+  margin-top: 112px;
 }
 
-.nameInputs div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 500px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+#textSide #multiple h5 {
+  width: 385px;
 }
 
-.nameInputs div label {
-  padding: 0 5px;
+#textSide #multiple .multiple {
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  background: #F7F9FC;
+  color: #726B00;
+  margin-left: 30px;
 }
 
-.nameInputs div .inputHowMany {
-  width: 45px;
-}
-
-.container2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 30px;
-  font-weight: 600;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-height: 100vh;
-  width: 1500px;
-}
-
-.container2 .canvasContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px;
-  position: relative;
-}
-
-.container2 .canvasContainer img {
-  width: 80px;
-  height: 20px;
-  position: absolute;
-  top: calc(50% - 10px);
-  z-index: 5;
-}
-
-.container2 .canvasContainer canvas {
-  padding: 20px;
-  background-color: #ccc;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transition: 4s;
-  transition: 4s;
-  border: 5px dotted black;
-  border-radius: 50%;
-}
-
-.container2 .actual {
-  width: 30%;
-}
-
-.container2 .actual span {
-  padding-left: 10px;
-}
-
-.container2 .actual .drawnElementsList {
-  list-style: none;
-  font-size: 25px;
-}
-
-.container2 .actual .drawnElementsList li:first-child {
-  font-size: 25px;
-}
-
-.container2 .actual .drawnElementsList li {
-  border-bottom: 2px solid #0069D9;
-  padding-top: 10px;
-  font-size: 15px;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .container .actual {
-    width: 100%;
-  }
-}
-
-@media (max-width: 850px) {
-  .container .canvasContainer img {
-    width: 40px;
-  }
-}
-
-@media (max-width: 500px) {
-  h1 {
-    color: white;
-    padding: 15px;
-    border: 3px solid white;
-    border-radius: 20px;
-    font-size: 25px;
-  }
-  .container .canvasContainer canvas {
-    padding: 10px;
-    background-color: #ccc;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    -webkit-transition: 4s;
-    transition: 4s;
-    border: 5px dotted black;
-    border-radius: 50%;
-  }
-  .container .canvasContainer img {
-    width: 20px;
-  }
-  .container .actual {
-    width: 100%;
-    font-size: 15px;
-  }
-  .container .actual h2 {
-    font-size: 20px;
-    font-weight: 700;
-  }
-  .container .actual span {
-    padding-left: 10px;
-  }
-  .container .actual .drawnElementsList {
-    list-style: none;
-    font-size: 15px;
-  }
-  .container .actual .drawnElementsList li:first-child {
-    font-size: 15px;
-  }
-  .container .actual .drawnElementsList li {
-    border-bottom: 2px solid #0069D9;
-    padding-top: 10px;
-    font-size: 12px;
-  }
+#textSide #multiple .multipleActive {
+  background: #726B00;
+  color: #F7F9FC;
 }
 /*# sourceMappingURL=style.css.map */

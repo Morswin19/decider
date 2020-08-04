@@ -22,32 +22,38 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row h-100">
-            <div id="wheelSide" class="col-xl-7 h-100">
-                <div id="titleContainer" class="d-flex justify-content-end">
+        <div class="row">
+            <div id="wheelSide" class="col-xl-7 p-0 d-flex justify-content-end">
+                <div id="titleContainer" class="d-flex flex-column ml-5">
                     <h1 class=" mt-5 pt-5  text-uppercase">Struggling to make
                         a decision?</h1>
+                    <h5 class="">Enter your options and let the fate decide for you!</h5>
+                    <div id="wheel" class="rounded-circle mt-5"></div>
                 </div>
-                <div id="backgroundText">Decider</div>
 
-                <h5>Enter your options and let the fate decide for you!</h5>
+                <div id="backgroundText">
+                    <img src="../wheel_of_fortune_vanillaJS/img/DECIDER.svg" alt="">
+                </div>
             </div>
             <div id="textSide" class="col-xl-5">
                 <div class="text-center">
                     <h1 class="text-uppercase font-weight-bold mb-5">Choose between:</h1>
                     <div class="d-flex flex-md-column">
                         <div id="inputs" class="d-flex flex-column">
-                            <input class="mb-5" type="number" min='2' max='30' placeholder='2' value='2'>
-                            <input class="mb-5" type="number" min='2' max='30' placeholder='2' value='2'>
+                            <input class="mb-5" type="text" placeholder='enter option 1'>
+                            <input class="mb-5" type="text" placeholder='enter option 2'>
                         </div>
-                        <i class="fa fa-plus"></i>
-                        <span>Add more</span>
-                        <h5 class="text-uppercase">Choose one option <span class="font-weight-bold">multiple</span>
-                            times?
-                        </h5>
+                        <i class="fa fa-plus rounded-circle m-auto"></i>
+                        <span class="mt-2">Add more</span>
                     </div>
                 </div>
-
+                <div id="multiple" class="d-flex align-items-baseline mb-5">
+                    <h5 class="text-uppercase mr-4">Choose one option <span class="font-weight-bold">multiple</span>
+                        times?
+                    </h5>
+                    <span id="multipleYes" class="multiple multipleActive rounded-circle">YES</span>
+                    <span id="multipleNo" class="multiple rounded-circle">NO</span>
+                </div>
             </div>
         </div>
     </div>
