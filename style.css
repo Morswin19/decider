@@ -8,7 +8,6 @@
 }
 
 body {
-  background-color: azure;
   font-family: 'Manrope', sans-serif;
   color: #003f8a;
   text-align: left;
@@ -27,10 +26,15 @@ body {
   width: 1000px;
   font-size: 90px;
   text-align: left;
+  -webkit-transform: translateX(45px);
+          transform: translateX(45px);
+  margin-top: 75px;
 }
 
 #wheelSide #titleContainer h5 {
   text-align: left;
+  -webkit-transform: translateX(45px);
+          transform: translateX(45px);
 }
 
 #wheelSide #titleContainer #wheel {
@@ -48,6 +52,12 @@ body {
 #wheelSide #titleContainer footer {
   text-align: left;
   margin-top: 100px;
+}
+
+#backgroundText {
+  position: absolute;
+  top: -150px;
+  left: 0px;
 }
 
 #textSide {
@@ -73,6 +83,9 @@ body {
   text-align: left;
   padding-left: 20px;
   font-size: 20px;
+  border: 1px solid #F4F4F3;
+  -webkit-box-shadow: -12px -12px 30px 1px rgba(255, 254, 239, 0.5), 12px 12px 30px 3px rgba(114, 107, 0, 0.3);
+          box-shadow: -12px -12px 30px 1px rgba(255, 254, 239, 0.5), 12px 12px 30px 3px rgba(114, 107, 0, 0.3);
 }
 
 #textSide #inputsContainer #inputs input::-webkit-input-placeholder {
@@ -91,15 +104,27 @@ body {
   color: #A2B4C6;
 }
 
-#textSide #inputsContainer .fa {
-  width: 56px;
-  height: 56px;
-  line-height: 56px;
-  background: #726B00;
-  color: #F7F9FC;
-  margin-left: 30px;
+#textSide #inputsContainer #addOption {
+  position: relative;
   font-size: 40px;
-  font-weight: 300;
+  width: 54px;
+  height: 54px;
+  background: rgba(114, 107, 0, 0.67);
+  color: #F7F9FC;
+  border-radius: 50%;
+  margin: auto;
+  -webkit-box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
+          box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
+}
+
+#textSide #inputsContainer #addOption img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-47%) translateY(-47%);
+          transform: translateX(-47%) translateY(-47%);
+  -webkit-box-shadow: -12px -12px 30px 1px rgba(255, 254, 239, 0.5);
+          box-shadow: -12px -12px 30px 1px rgba(255, 254, 239, 0.5);
 }
 
 #textSide #multiple {
@@ -118,10 +143,12 @@ body {
   background: #F7F9FC;
   color: #726B00;
   margin-left: 30px;
+  -webkit-box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
+          box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
 }
 
 #textSide #multiple .multipleActive {
-  background: #726B00;
+  background: rgba(114, 107, 0, 0.67);
   color: #F7F9FC;
 }
 
@@ -134,5 +161,10 @@ body {
   background: linear-gradient(45deg, #9F9A53 20%, #726B00);
   color: #F7F9FC;
   font-size: 31px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 1px solid #726B00;
+  -webkit-box-shadow: -12px -12px 25px 10px white, 6px 6px 20px 10px rgba(114, 107, 0, 0.3), 1px 0px 0px 0px #fffeef;
+          box-shadow: -12px -12px 25px 10px white, 6px 6px 20px 10px rgba(114, 107, 0, 0.3), 1px 0px 0px 0px #fffeef;
 }
 /*# sourceMappingURL=style.css.map */

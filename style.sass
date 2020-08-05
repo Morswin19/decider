@@ -14,7 +14,7 @@ $csix: #9F9A53
     color: $ctwo
 
 body
-    background-color: azure
+    // background-color: azure
     font-family: 'Manrope', sans-serif
     color: $cone
     text-align: left
@@ -31,9 +31,12 @@ body
             width: 1000px
             font-size: 90px
             text-align: left
+            transform: translateX(45px)
+            margin-top: 75px
         
         h5
             text-align: left
+            transform: translateX(45px)
 
         #wheel
             min-width: 750px
@@ -50,7 +53,9 @@ body
             margin-top: 100px
 
 #backgroundText
-    // position: absolute
+    position: absolute
+    top: -150px
+    left: 0px
 
 #textSide
     background-color: rgba($ctwo, 0.15)
@@ -71,17 +76,40 @@ body
                 text-align: left
                 padding-left: 20px
                 font-size: 20px
+                border: 1px solid $cfour
+                box-shadow: -12px -12px 30px 1px rgba(#FFFEEF, 0.5), 12px 12px 30px 3px rgba($ctwo,0.3)
                 &::placeholder
                     color: $cfive
-        .fa
-            width: 56px 
-            height: 56px
-            line-height: 56px
-            background: $ctwo
-            color: $cthree
-            margin-left: 30px
+        #addOption
+            // place-items: center
+            position: relative
             font-size: 40px
-            font-weight: 300
+            width: 54px
+            height: 54px
+            background: rgba($ctwo, 0.67)
+            color: $cthree
+            border-radius: 50%
+            margin: auto
+            box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
+
+            img
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translateX(-47%) translateY(-47%)
+                box-shadow: -12px -12px 30px 1px rgba(#FFFEEF, 0.5)
+            
+        // .fa
+        //     width: 56px 
+        //     height: 56px
+        //     line-height: 56px
+        //     background: $ctwo
+        //     color: $cthree
+        //     margin-left: 30px
+        //     font-size: 40px
+        //     font-weight: 300
+        //     box-shadow: 2px 2px 5px 1px rgba(#726E33, 1)
+
     #multiple
         width: 574px
         margin-top: 112px
@@ -94,8 +122,9 @@ body
             background: $cthree
             color: $ctwo
             margin-left: 30px
+            box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
         .multipleActive
-            background: $ctwo
+            background: rgba($ctwo, 0.67)
             color: $cthree
     #play
         border: 1px solid $ctwo
@@ -106,6 +135,10 @@ body
         background: linear-gradient(45deg, $csix 20%, $ctwo)
         color: $cthree
         font-size: 31px
+        border-radius: 20px
+        font-weight: bold
+        border: 1px solid $ctwo
+        box-shadow: -12px -12px 25px 10px rgba(#FFfffF, 1), 6px 6px 20px 10px rgba($ctwo, 0.3), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
         
 
 
