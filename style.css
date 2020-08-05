@@ -39,8 +39,8 @@ body {
   width: 750px;
   heigth: 750px;
   background-color: #F7F9FC;
-  -webkit-box-shadow: -12px -12px 20px 1px white, 12px 1px 25px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: -12px -12px 20px 1px white, 12px 1px 25px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: -12px -12px 20px 1px white, 12px 1px 20px 3px rgba(162, 180, 198, 0.3);
+          box-shadow: -12px -12px 20px 1px white, 12px 1px 20px 3px rgba(162, 180, 198, 0.3);
   border-top: 1px solid white;
   border-left: 1px solid white;
 }
