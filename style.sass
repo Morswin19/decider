@@ -4,6 +4,7 @@ $ctwo:  #726B00
 $cthree: #F7F9FC
 $cfour: #F4F4F3
 $cfive: #A2B4C6
+$csix: #9F9A53
     
 *
     margin: 0
@@ -25,7 +26,7 @@ body
         img
             color: black
     #titleContainer
-        height: 100vh
+        // height: 100vh
         h1
             width: 1000px
             font-size: 90px
@@ -39,7 +40,11 @@ body
             min-height: 750px
             width: 750px
             heigth: 750px
-            background-color: $cfive
+            background-color: $csix
+
+        footer
+            text-align: left
+            margin-top: 100px
 
 #backgroundText
     // position: absolute
@@ -49,9 +54,9 @@ body
     color: $ctwo
     padding-left: 100px
 
-    >div
+    #inputsContainer
         width: 419px
-        margin-top: 470px
+        margin-top: 370px
         text-align: center
         h1
             font-size: 40px
@@ -89,8 +94,16 @@ body
         .multipleActive
             background: $ctwo
             color: $cthree
-
-            
+    #play
+        border: 1px solid $ctwo
+        width: 292px
+        height: 103px
+        margin-top: 103px
+        margin-bottom: 100px
+        background: linear-gradient(45deg, $csix 20%, $ctwo)
+        color: $cthree
+        font-size: 31px
+        
 
 
 

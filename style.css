@@ -23,10 +23,6 @@ body {
   color: black;
 }
 
-#wheelSide #titleContainer {
-  height: 100vh;
-}
-
 #wheelSide #titleContainer h1 {
   width: 1000px;
   font-size: 90px;
@@ -42,7 +38,12 @@ body {
   min-height: 750px;
   width: 750px;
   heigth: 750px;
-  background-color: #A2B4C6;
+  background-color: #9F9A53;
+}
+
+#wheelSide #titleContainer footer {
+  text-align: left;
+  margin-top: 100px;
 }
 
 #textSide {
@@ -51,17 +52,17 @@ body {
   padding-left: 100px;
 }
 
-#textSide > div {
+#textSide #inputsContainer {
   width: 419px;
-  margin-top: 470px;
+  margin-top: 370px;
   text-align: center;
 }
 
-#textSide > div h1 {
+#textSide #inputsContainer h1 {
   font-size: 40px;
 }
 
-#textSide > div #inputs input {
+#textSide #inputsContainer #inputs input {
   height: 50px;
   border-radius: 15px;
   background-color: #F4F4F3;
@@ -70,23 +71,23 @@ body {
   font-size: 20px;
 }
 
-#textSide > div #inputs input::-webkit-input-placeholder {
+#textSide #inputsContainer #inputs input::-webkit-input-placeholder {
   color: #A2B4C6;
 }
 
-#textSide > div #inputs input:-ms-input-placeholder {
+#textSide #inputsContainer #inputs input:-ms-input-placeholder {
   color: #A2B4C6;
 }
 
-#textSide > div #inputs input::-ms-input-placeholder {
+#textSide #inputsContainer #inputs input::-ms-input-placeholder {
   color: #A2B4C6;
 }
 
-#textSide > div #inputs input::placeholder {
+#textSide #inputsContainer #inputs input::placeholder {
   color: #A2B4C6;
 }
 
-#textSide > div .fa {
+#textSide #inputsContainer .fa {
   width: 56px;
   height: 56px;
   line-height: 56px;
@@ -118,5 +119,16 @@ body {
 #textSide #multiple .multipleActive {
   background: #726B00;
   color: #F7F9FC;
+}
+
+#textSide #play {
+  border: 1px solid #726B00;
+  width: 292px;
+  height: 103px;
+  margin-top: 103px;
+  margin-bottom: 100px;
+  background: linear-gradient(45deg, #9F9A53 20%, #726B00);
+  color: #F7F9FC;
+  font-size: 31px;
 }
 /*# sourceMappingURL=style.css.map */
