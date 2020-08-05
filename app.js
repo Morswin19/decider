@@ -11,7 +11,7 @@ let amounts = nameInputs.querySelectorAll('inputHowMany');
 let namesSubmit = document.querySelector('.names-submit');
 const wheelContainer = document.querySelector('.container');
 const startWheel = document.querySelector('.btn-danger');
-const drawnElementsList = document.querySelector('.drawnElementsList');
+const drawnElementsList = document.querySelector('#play');
 const countSpan = document.querySelector('.actual span');
 const canvas = document.querySelector('canvas');
 

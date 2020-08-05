@@ -90,25 +90,17 @@ body
             color: $cthree
             border-radius: 50%
             margin: auto
+            cursor: pointer
             box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
-
+            &:hover
+                background: $ctwo
+           
             img
                 position: absolute
                 top: 50%
                 left: 50%
                 transform: translateX(-47%) translateY(-47%)
                 box-shadow: -12px -12px 30px 1px rgba(#FFFEEF, 0.5)
-            
-        // .fa
-        //     width: 56px 
-        //     height: 56px
-        //     line-height: 56px
-        //     background: $ctwo
-        //     color: $cthree
-        //     margin-left: 30px
-        //     font-size: 40px
-        //     font-weight: 300
-        //     box-shadow: 2px 2px 5px 1px rgba(#726E33, 1)
 
     #multiple
         width: 574px
@@ -119,13 +111,20 @@ body
             width: 56px 
             height: 56px
             line-height: 56px
-            background: $cthree
             color: $ctwo
             margin-left: 30px
             box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
+            cursor: pointer
+            background: $cthree
         .multipleActive
+            @extend .multiple
             background: rgba($ctwo, 0.67)
             color: $cthree
+        .multipleDisactive
+            @extend .multiple
+            &:hover
+                font-weight: bold
+                background: #FFFFFF
     #play
         border: 1px solid $ctwo
         width: 292px
@@ -137,9 +136,12 @@ body
         font-size: 31px
         border-radius: 20px
         font-weight: bold
+        outline: none
         border: 1px solid $ctwo
         box-shadow: -12px -12px 25px 10px rgba(#FFfffF, 1), 6px 6px 20px 10px rgba($ctwo, 0.3), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
-        
+        &:hover
+            background: $cthree
+            color: $ctwo
 
 
 

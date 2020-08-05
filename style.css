@@ -113,8 +113,13 @@ body {
   color: #F7F9FC;
   border-radius: 50%;
   margin: auto;
+  cursor: pointer;
   -webkit-box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
           box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
+}
+
+#textSide #inputsContainer #addOption:hover {
+  background: #726B00;
 }
 
 #textSide #inputsContainer #addOption img {
@@ -136,20 +141,26 @@ body {
   width: 385px;
 }
 
-#textSide #multiple .multiple {
+#textSide #multiple .multiple, #textSide #multiple .multipleActive, #textSide #multiple .multipleDisactive {
   width: 56px;
   height: 56px;
   line-height: 56px;
-  background: #F7F9FC;
   color: #726B00;
   margin-left: 30px;
   -webkit-box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
           box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
+  cursor: pointer;
+  background: #F7F9FC;
 }
 
 #textSide #multiple .multipleActive {
   background: rgba(114, 107, 0, 0.67);
   color: #F7F9FC;
+}
+
+#textSide #multiple .multipleDisactive:hover {
+  font-weight: bold;
+  background: #FFFFFF;
 }
 
 #textSide #play {
@@ -163,8 +174,14 @@ body {
   font-size: 31px;
   border-radius: 20px;
   font-weight: bold;
+  outline: none;
   border: 1px solid #726B00;
   -webkit-box-shadow: -12px -12px 25px 10px white, 6px 6px 20px 10px rgba(114, 107, 0, 0.3), 1px 0px 0px 0px #fffeef;
           box-shadow: -12px -12px 25px 10px white, 6px 6px 20px 10px rgba(114, 107, 0, 0.3), 1px 0px 0px 0px #fffeef;
+}
+
+#textSide #play:hover {
+  background: #F7F9FC;
+  color: #726B00;
 }
 /*# sourceMappingURL=style.css.map */
