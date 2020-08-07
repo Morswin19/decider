@@ -1,8 +1,14 @@
-const inputs = document.querySelector(".option")
-
-let wheelNames = ["Lusia", "Jaga", "Diesel", "Gadolina"];
+//DOM variables
+let options = document.querySelectorAll(".option");
+const addOption = document.querySelector("#addOption");
 const canvas = document.querySelector('canvas');
-const playBtn = document.querySelector('#play')
+const playBtn = document.querySelector('#play');
+const inputs = document.querySelector("#inputs")
+
+//wheel variables
+let wheelNames = [];
+let wheelDeg = 0;
+let optionsArray = [];
 
 //construct wheel in canvas
 const wheelEngine = () => {
@@ -73,19 +79,26 @@ const wheelEngine = () => {
     // showDrawnElementsList()
 }
 
-wheelEngine()
-
-let wheelDeg = 0
+const addOptionClick = () => {
+    const input = document.createElement('input');
+    input.className = 'option mb-5'
+    input.placeholder = `enter option ${optionsArray.length + 1}`
+    input.onblur = function () { wheelNamesChanged() };
+    inputs.appendChild(input);
+    // optionsArray = [...document.querySelectorAll(".option")];
+    wheelNamesChanged()
+    wheelEngine()
+};
 
 const handleClick = () => {
-    const deg = Math.floor(Math.random() * 3000);
-    if (deg < 360) {
+    const deg = Math.floor(Math.random() * 3600);
+    if (deg < 720) {
         return this.handleClick();
     }
     wheelDeg = wheelDeg + deg
     const canvas = document.querySelector('canvas')
     canvas.style.transform = `rotate(${wheelDeg}deg)`;
-    // startWheel.disabled = 'true';
+    startWheel.disabled = 'true';
     let degLeft = wheelDeg % 360;
     let oneSlice = 360 / wheelNames.length;
     const drawnElement = wheelNames.filter((name, index) => (index * oneSlice < (360 - degLeft)) && ((index + 1) * oneSlice >= (360 - degLeft)))
@@ -103,3 +116,15 @@ const handleClick = () => {
         }, 5000)
     }
 }
+
+const wheelNamesChanged = () => {
+    optionsArray = [...document.querySelectorAll(".option")];
+    wheelNames = [];
+    for (i = 0; i < optionsArray.length; i++) {
+        wheelNames.push(optionsArray[i].value)
+    }
+    wheelEngine()
+}
+
+wheelNamesChanged()
+

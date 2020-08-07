@@ -60,7 +60,6 @@ body {
 }
 
 #wheelSide #titleContainer #wheel .canvasContainer canvas {
-  background-color: rgba(255, 255, 12, 0.1);
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: 4s;
@@ -75,13 +74,13 @@ body {
 
 #backgroundText {
   position: absolute;
-  top: -190px;
-  left: -50px;
+  top: -160px;
+  left: -40px;
   z-index: 0;
 }
 
 #backgroundText img {
-  width: 102vw;
+  width: 100vw;
 }
 
 #textSide {
@@ -100,7 +99,7 @@ body {
   font-size: 40px;
 }
 
-#textSide #inputsContainer #inputs input {
+#textSide #inputsContainer #inputs .option {
   height: 50px;
   border-radius: 15px;
   background-color: #F4F4F3;
@@ -112,19 +111,19 @@ body {
           box-shadow: -12px -12px 30px 1px rgba(255, 254, 239, 0.5), 12px 12px 30px 3px rgba(114, 107, 0, 0.3);
 }
 
-#textSide #inputsContainer #inputs input::-webkit-input-placeholder {
+#textSide #inputsContainer #inputs .option::-webkit-input-placeholder {
   color: #A2B4C6;
 }
 
-#textSide #inputsContainer #inputs input:-ms-input-placeholder {
+#textSide #inputsContainer #inputs .option:-ms-input-placeholder {
   color: #A2B4C6;
 }
 
-#textSide #inputsContainer #inputs input::-ms-input-placeholder {
+#textSide #inputsContainer #inputs .option::-ms-input-placeholder {
   color: #A2B4C6;
 }
 
-#textSide #inputsContainer #inputs input::placeholder {
+#textSide #inputsContainer #inputs .option::placeholder {
   color: #A2B4C6;
 }
 

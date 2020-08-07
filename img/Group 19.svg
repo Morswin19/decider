@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211" height="145" viewBox="0 0 211 145">
+  <defs>
+    <filter id="Polygon_1" x="24" y="24" width="187" height="121" filterUnits="userSpaceOnUse">
+      <feOffset dx="12" dy="12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#a2b4c6" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Polygon_2" x="0" y="0" width="187" height="121" filterUnits="userSpaceOnUse">
+      <feOffset dx="-12" dy="-12" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_19" data-name="Group 19" transform="translate(42.277 41.802)">
+    <g id="Group_2" data-name="Group 2" transform="translate(0 0)">
+      <g transform="matrix(1, 0, 0, 1, -42.28, -41.8)" filter="url(#Polygon_1)">
+        <path id="Polygon_1-2" data-name="Polygon 1" d="M25.638,20.244a5,5,0,0,1,9.724,0L59.519,120.832A5,5,0,0,1,54.657,127H6.343a5,5,0,0,1-4.862-6.168Z" transform="translate(42 103) rotate(-90)" fill="#726b00"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -42.28, -41.8)" filter="url(#Polygon_2)">
+        <path id="Polygon_2-2" data-name="Polygon 2" d="M25.638,20.244a5,5,0,0,1,9.724,0L59.519,120.832A5,5,0,0,1,54.657,127H6.343a5,5,0,0,1-4.862-6.168Z" transform="translate(42 103) rotate(-90)" fill="#726b00"/>
+      </g>
+    </g>
+  </g>
+</svg>

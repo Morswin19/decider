@@ -50,10 +50,12 @@
                     <h1 class="text-uppercase font-weight-bold mb-5">Choose between:</h1>
                     <div class="d-flex flex-md-column">
                         <div id="inputs" class="d-flex flex-column">
-                            <input class="option mb-5" type="text" placeholder='enter option 1'>
-                            <input class="option mb-5" type="text" placeholder='enter option 2'>
+                            <input class="option mb-5" onblur="wheelNamesChanged()" type="text"
+                                placeholder='enter option 1'>
+                            <input class="option mb-5" onblur="wheelNamesChanged()" type="text"
+                                placeholder='enter option 2'>
                         </div>
-                        <div id="addOption">
+                        <div id="addOption" onclick="addOptionClick()">
                             <img src="./img/Union 1.svg" alt="">
                             <!-- <i class="fa fa-plus rounded-circle m-auto"></i> -->
                         </div>
