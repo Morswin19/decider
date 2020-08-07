@@ -15,16 +15,16 @@ body {
 
 #wheelSide {
   background-color: #F7F9FC;
-  position: relative;
 }
 
-#wheelSide #backgroundText img {
-  color: black;
+#wheelSide #titleContainer {
+  z-index: 1;
 }
 
 #wheelSide #titleContainer h1 {
   width: 1000px;
   font-size: 90px;
+  font-weight: 900;
   text-align: left;
   -webkit-transform: translateX(45px);
           transform: translateX(45px);
@@ -49,6 +49,25 @@ body {
   border-left: 1px solid white;
 }
 
+#wheelSide #titleContainer #wheel .canvasContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+#wheelSide #titleContainer #wheel .canvasContainer canvas {
+  background-color: rgba(255, 255, 12, 0.1);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 4s;
+  transition: 4s;
+  border-radius: 50%;
+}
+
 #wheelSide #titleContainer footer {
   text-align: left;
   margin-top: 100px;
@@ -56,8 +75,13 @@ body {
 
 #backgroundText {
   position: absolute;
-  top: -150px;
-  left: 0px;
+  top: -190px;
+  left: -50px;
+  z-index: 0;
+}
+
+#backgroundText img {
+  width: 102vw;
 }
 
 #textSide {

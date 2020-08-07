@@ -21,15 +21,20 @@ body
 
 #wheelSide
     background-color: $cthree
-    position: relative
+    // position: relative
     #backgroundText
-        img
-            color: black
+    //     img
+    //         color: black
+        width: 100vw
+    //         top: 0
+    //         left: 0
     #titleContainer
         // height: 100vh
+        z-index: 1
         h1
             width: 1000px
             font-size: 90px
+            font-weight: 900
             text-align: left
             transform: translateX(45px)
             margin-top: 75px
@@ -47,6 +52,15 @@ body
             box-shadow: -12px -12px 20px 1px rgba(255,255,255,1), 12px 1px 20px 3px rgba(#A2B4C6,0.3)
             border-top: 1px solid white
             border-left: 1px solid white
+            .canvasContainer
+                display: flex
+                justify-content: center
+                position: relative
+                canvas
+                    background-color: rgba(255,255,12,0.1)
+                    transform: rotate(0deg)
+                    transition: 4s
+                    border-radius: 50%
 
         footer
             text-align: left
@@ -54,8 +68,11 @@ body
 
 #backgroundText
     position: absolute
-    top: -150px
-    left: 0px
+    top: -190px
+    left: -50px
+    z-index: 0
+    img
+        width: 102vw
 
 #textSide
     background-color: rgba($ctwo, 0.15)
