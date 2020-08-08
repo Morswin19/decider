@@ -24,7 +24,7 @@
     <div class="container-fluid">
         <div class="row">
             <div id="wheelSide" class="col-xl-7 p-0 d-flex justify-content-end">
-                <div id="titleContainer" class="d-flex flex-column ml-5">
+                <div id="titleContainer" class="d-flex flex-column align-items-center">
                     <h1 class="pt-5  text-uppercase">Struggling to make
                         a decision?</h1>
                     <h5 class="">Enter your options and let the fate decide for you!</h5>
@@ -34,6 +34,12 @@
                             <span>
                             </span>
                         </div>
+
+                    </div>
+                    <div id="decisions" class="mt-5">
+                        <h2 class="text-uppercase nonDisplay">The decision has been made!</h2>
+                        <ul id="decisionsMade">
+                        </ul>
                     </div>
                     <footer>
                         <span>© P. Kalman</span>
@@ -67,10 +73,10 @@
                     <h5 class="text-uppercase mr-4">Choose one option <span class="font-weight-bold">multiple</span>
                         times?
                     </h5>
-                    <span id="multipleYes" class="multipleActive rounded-circle">YES</span>
-                    <span id="multipleNo" class="multipleDisactive rounded-circle">NO</span>
+                    <span id="multipleYes" class="multiButton multipleActive rounded-circle">YES</span>
+                    <span id="multipleNo" class="multiButton multipleDisactive rounded-circle">NO</span>
                 </div>
-                <button onclick="handleClick()" id="play" class="btn-lg">let's play!</button>
+                <button onclick="handleClick()" id="play" class="btn-lg">let's decide!</button>
             </div>
         </div>
     </div>

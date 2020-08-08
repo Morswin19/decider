@@ -31,6 +31,7 @@ body
     #titleContainer
         // height: 100vh
         z-index: 1
+        width: 100%
         h1
             width: 1000px
             font-size: 90px
@@ -60,6 +61,17 @@ body
                     transform: rotate(0deg)
                     transition: 4s
                     border-radius: 50%
+
+        #decisions
+            width: 100%
+            h2
+                text-decoration: underline
+            ul
+                li
+                    font-size: 20px
+                    &:first-child
+                        font-size: 35px
+                        font-weight: 700
 
         footer
             text-align: left
@@ -94,8 +106,12 @@ body
                 font-size: 20px
                 border: 1px solid $cfour
                 box-shadow: -12px -12px 30px 1px rgba(#FFFEEF, 0.5), 12px 12px 30px 3px rgba($ctwo,0.3)
+                outline: none
                 &::placeholder
                     color: $cfive
+            .option:focus
+                border: 2px solid $ctwo
+                
         #addOption
             // place-items: center
             position: relative
@@ -132,10 +148,12 @@ body
             box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
             cursor: pointer
             background: $cthree
+            font-weight: 600
         .multipleActive
             @extend .multiple
             background: rgba($ctwo, 0.67)
             color: $cthree
+            cursor: default
         .multipleDisactive
             @extend .multiple
             &:hover
@@ -158,6 +176,9 @@ body
         &:hover
             background: $cthree
             color: $ctwo
+
+.nonDisplay
+    display: none
 
 
 

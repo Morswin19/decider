@@ -3,12 +3,17 @@ let options = document.querySelectorAll(".option");
 const addOption = document.querySelector("#addOption");
 const canvas = document.querySelector('canvas');
 const playBtn = document.querySelector('#play');
-const inputs = document.querySelector("#inputs")
+const inputs = document.querySelector("#inputs");
+const decisionsMadeList = document.querySelector("#decisionsMade");
+const multiButtons = document.querySelectorAll(".multiButton");
+const decisionsMadeTitle = document.querySelector(".nonDisplay");
 
 //wheel variables
 let wheelNames = [];
 let wheelDeg = 0;
 let optionsArray = [];
+let drawnElements = [];
+let multiple = true;
 
 //construct wheel in canvas
 const wheelEngine = () => {
@@ -64,26 +69,43 @@ const wheelEngine = () => {
         deg += sliceDeg;
     }
 
-    // showDrawnElementsList = () => {
-    //     const listElements = drawnElementsList.querySelectorAll('li');
-    //     if (listElements.length > 0) {
-    //         listElements.forEach(element => element.remove());
-    //     }
-    //     for (i = 0; i < drawnElements.length; i++) {
-    //         const li = document.createElement('li');
-    //         li.innerHTML = drawnElements[i];
-    //         drawnElementsList.appendChild(li);
-    //     }
-    // }
+    showDrawnElementsList = () => {
+        decisionsMadeTitle.classList.remove('nonDisplay');
+        const listElements = decisionsMadeList.querySelectorAll('li');
+        if (listElements.length > 0) {
+            listElements.forEach(element => element.remove());
+        }
+        for (i = 0; i < drawnElements.length; i++) {
+            const li = document.createElement('li');
+            li.innerHTML = drawnElements[i];
+            decisionsMadeList.appendChild(li);
+        }
+    }
 
-    // showDrawnElementsList()
+    if (drawnElements.length > 0) {
+        showDrawnElementsList()
+    }
 }
+
+// showDrawnElementsList = () => {
+//     decisionsMadeTitle.classList.remove('nonDisplay');
+//     const listElements = decisionsMadeList.querySelectorAll('li');
+//     if (listElements.length > 0) {
+//         listElements.forEach(element => element.remove());
+//     }
+//     for (i = 0; i < drawnElements.length; i++) {
+//         const li = document.createElement('li');
+//         li.innerHTML = drawnElements[i];
+//         decisionsMadeList.appendChild(li);
+//     }
+// }
 
 const addOptionClick = () => {
     const input = document.createElement('input');
-    input.className = 'option mb-5'
-    input.placeholder = `enter option ${optionsArray.length + 1}`
-    input.onblur = function () { wheelNamesChanged() };
+    input.className = 'option mb-5';
+    input.placeholder = `enter option ${optionsArray.length + 1}`;
+    input.onfocus = function (e) { e.target.classList.add('optionActive') }
+    input.onblur = function (e) { wheelNamesChanged(e) };
     inputs.appendChild(input);
     // optionsArray = [...document.querySelectorAll(".option")];
     wheelNamesChanged()
@@ -93,26 +115,27 @@ const addOptionClick = () => {
 const handleClick = () => {
     const deg = Math.floor(Math.random() * 3600);
     if (deg < 720) {
-        return this.handleClick();
+        return handleClick();
     }
     wheelDeg = wheelDeg + deg
     const canvas = document.querySelector('canvas')
     canvas.style.transform = `rotate(${wheelDeg}deg)`;
-    startWheel.disabled = 'true';
+    play.disabled = 'true';
     let degLeft = wheelDeg % 360;
     let oneSlice = 360 / wheelNames.length;
     const drawnElement = wheelNames.filter((name, index) => (index * oneSlice < (360 - degLeft)) && ((index + 1) * oneSlice >= (360 - degLeft)))
     if (drawnElement[0] !== undefined) {
         drawnElements.unshift(drawnElement[0]);
     }
-    if (radioYes.checked == true) {
+    if (multiple === false) {
         setTimeout(() => elementCut(), 7000);
     } else {
         setTimeout(() => {
-            (startWheel.removeAttribute('disabled'));
+            // (startWheel.removeAttribute('disabled'));
+            play.removeAttribute('disabled');
             wheelEngine();
-            startCount++;
-            countSpan.innerHTML = `(${startCount})`;
+            // startCount++;
+            // countSpan.innerHTML = `(${startCount})`;
         }, 5000)
     }
 }
@@ -125,6 +148,37 @@ const wheelNamesChanged = () => {
     }
     wheelEngine()
 }
+
+multiButtons.forEach(multi => multi.addEventListener('click', (e) => multipleClick(e)));
+
+const multipleClick = (e) => {
+    if (multiple === true && e.target.innerHTML == "NO") {
+        multiButtons[0].classList.remove('multipleActive');
+        multiButtons[0].classList.add('multipleDisactive');
+        multiButtons[1].classList.remove('multipleDisactive');
+        multiButtons[1].classList.add('multipleActive');
+        multiple = false;
+    } else if (multiple === false && e.target.innerHTML == "YES") {
+        multiButtons[0].classList.remove('multipleDisactive');
+        multiButtons[0].classList.add('multipleActive');
+        multiButtons[1].classList.remove('multipleActive');
+        multiButtons[1].classList.add('multipleDisactive');
+        multiple = true;
+    }
+}
+
+elementCut = () => {
+    play.removeAttribute('disabled')
+    let degLeft = wheelDeg % 360;
+    let oneSlice = 360 / wheelNames.length;
+    const nameToCut = wheelNames.filter((name, index) => (index * oneSlice < (360 - degLeft)) && ((index + 1) * oneSlice >= (360 - degLeft)))
+    const index = wheelNames.indexOf(nameToCut[0]);
+    wheelNames.splice(index, 1);
+    // startCount++;
+    // countSpan.innerHTML = `(${startCount})`;
+    wheelEngine();
+}
+
 
 wheelNamesChanged()
 

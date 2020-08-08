@@ -19,6 +19,7 @@ body {
 
 #wheelSide #titleContainer {
   z-index: 1;
+  width: 100%;
 }
 
 #wheelSide #titleContainer h1 {
@@ -67,6 +68,23 @@ body {
   border-radius: 50%;
 }
 
+#wheelSide #titleContainer #decisions {
+  width: 100%;
+}
+
+#wheelSide #titleContainer #decisions h2 {
+  text-decoration: underline;
+}
+
+#wheelSide #titleContainer #decisions ul li {
+  font-size: 20px;
+}
+
+#wheelSide #titleContainer #decisions ul li:first-child {
+  font-size: 35px;
+  font-weight: 700;
+}
+
 #wheelSide #titleContainer footer {
   text-align: left;
   margin-top: 100px;
@@ -109,6 +127,7 @@ body {
   border: 1px solid #F4F4F3;
   -webkit-box-shadow: -12px -12px 30px 1px rgba(255, 254, 239, 0.5), 12px 12px 30px 3px rgba(114, 107, 0, 0.3);
           box-shadow: -12px -12px 30px 1px rgba(255, 254, 239, 0.5), 12px 12px 30px 3px rgba(114, 107, 0, 0.3);
+  outline: none;
 }
 
 #textSide #inputsContainer #inputs .option::-webkit-input-placeholder {
@@ -125,6 +144,10 @@ body {
 
 #textSide #inputsContainer #inputs .option::placeholder {
   color: #A2B4C6;
+}
+
+#textSide #inputsContainer #inputs .option:focus {
+  border: 2px solid #726B00;
 }
 
 #textSide #inputsContainer #addOption {
@@ -174,11 +197,13 @@ body {
           box-shadow: -12px -12px 20px 2px #fffeef, 0px 3px 15px 5px rgba(0, 0, 0, 0.16), 1px 0px 0px 0px #fffeef;
   cursor: pointer;
   background: #F7F9FC;
+  font-weight: 600;
 }
 
 #textSide #multiple .multipleActive {
   background: rgba(114, 107, 0, 0.67);
   color: #F7F9FC;
+  cursor: default;
 }
 
 #textSide #multiple .multipleDisactive:hover {
@@ -206,5 +231,9 @@ body {
 #textSide #play:hover {
   background: #F7F9FC;
   color: #726B00;
+}
+
+.nonDisplay {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
