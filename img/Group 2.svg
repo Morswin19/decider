@@ -15,14 +15,12 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Group_19" data-name="Group 19" transform="translate(42.277 41.802)">
-    <g id="Group_2" data-name="Group 2" transform="translate(0 0)">
-      <g transform="matrix(1, 0, 0, 1, -42.28, -41.8)" filter="url(#Polygon_1)">
-        <path id="Polygon_1-2" data-name="Polygon 1" d="M25.638,20.244a5,5,0,0,1,9.724,0L59.519,120.832A5,5,0,0,1,54.657,127H6.343a5,5,0,0,1-4.862-6.168Z" transform="translate(42 103) rotate(-90)" fill="#726b00"/>
-      </g>
-      <g transform="matrix(1, 0, 0, 1, -42.28, -41.8)" filter="url(#Polygon_2)">
-        <path id="Polygon_2-2" data-name="Polygon 2" d="M25.638,20.244a5,5,0,0,1,9.724,0L59.519,120.832A5,5,0,0,1,54.657,127H6.343a5,5,0,0,1-4.862-6.168Z" transform="translate(42 103) rotate(-90)" fill="#726b00"/>
-      </g>
+  <g id="Group_2" data-name="Group 2" transform="translate(42.277 41.802)">
+    <g transform="matrix(1, 0, 0, 1, -42.28, -41.8)" filter="url(#Polygon_1)">
+      <path id="Polygon_1-2" data-name="Polygon 1" d="M25.638,20.244a5,5,0,0,1,9.724,0L59.519,120.832A5,5,0,0,1,54.657,127H6.343a5,5,0,0,1-4.862-6.168Z" transform="translate(42 103) rotate(-90)" fill="#726b00"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -42.28, -41.8)" filter="url(#Polygon_2)">
+      <path id="Polygon_2-2" data-name="Polygon 2" d="M25.638,20.244a5,5,0,0,1,9.724,0L59.519,120.832A5,5,0,0,1,54.657,127H6.343a5,5,0,0,1-4.862-6.168Z" transform="translate(42 103) rotate(-90)" fill="#726b00"/>
     </g>
   </g>
 </svg>

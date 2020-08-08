@@ -12,12 +12,14 @@ $csix: #9F9A53
     box-sizing: border-box
     text-align: center
     color: $ctwo
+    font-family: 'Manrope', sans-serif
 
 body
     // background-color: azure
     font-family: 'Manrope', sans-serif
     color: $cone
     text-align: left
+    position: relative
 
 #wheelSide
     background-color: $cthree
@@ -28,23 +30,31 @@ body
         width: 100vw
     //         top: 0
     //         left: 0
-    #titleContainer
+    #wheelContainer
         // height: 100vh
+        // margin-top: 100px
         z-index: 1
         width: 100%
-        h1
-            width: 1000px
-            font-size: 90px
-            font-weight: 900
-            text-align: left
-            transform: translateX(45px)
-            margin-top: 75px
-        
-        h5
-            text-align: left
-            transform: translateX(45px)
+        z-index: 10
+        position: relative
+        #titles
+            position: absolute
+            left: 220px
+            h1
+                // width: 1000px
+                font-size: 90px
+                font-weight: 900
+                text-align: left
+                // transform: translateX(45px)
+                margin-top: 65px
+            
+            h5
+                width: 1000px
+                text-align: left
+                // transform: translateX(45px)
 
         #wheel
+            margin-top: 420px
             min-width: 750px
             min-height: 750px
             width: 750px
@@ -53,6 +63,7 @@ body
             box-shadow: -12px -12px 20px 1px rgba(255,255,255,1), 12px 1px 20px 3px rgba(#A2B4C6,0.3)
             border-top: 1px solid white
             border-left: 1px solid white
+            position: relative
             .canvasContainer
                 display: flex
                 justify-content: center
@@ -61,6 +72,10 @@ body
                     transform: rotate(0deg)
                     transition: 4s
                     border-radius: 50%
+            img
+                position: absolute
+                top: 345px
+                left: 700px
 
         #decisions
             width: 100%
@@ -74,26 +89,28 @@ body
                         font-weight: 700
 
         footer
+            width: 1000px
             text-align: left
             margin-top: 100px
 
 #backgroundText
     position: absolute
-    top: -160px
-    left: -40px
-    z-index: 0
+    top: 0px
+    right: 0px
+    z-index: 5
     img
-        width: 100vw
+        width: 100%
 
 #textSide
     background-color: rgba($ctwo, 0.15)
     color: $ctwo
     padding-left: 100px
+    text-align: left
 
     #inputsContainer
         width: 419px
         margin-top: 370px
-        text-align: center
+        // text-align: center
         h1
             font-size: 40px
         #inputs
@@ -135,17 +152,19 @@ body
                 box-shadow: -12px -12px 30px 1px rgba(#FFFEEF, 0.5)
 
     #multiple
-        width: 574px
+        // width: 574px
         margin-top: 112px
+        align-items: baseline
         h5
             width: 385px
+            font-weight: 600
         .multiple
-            width: 56px 
+            width: 56px
             height: 56px
             line-height: 56px
             color: $ctwo
             margin-left: 30px
-            box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
+            box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1)
             cursor: pointer
             background: $cthree
             font-weight: 600
@@ -165,11 +184,12 @@ body
         height: 103px
         margin-top: 103px
         margin-bottom: 100px
+        margin-left: 70px
         background: linear-gradient(45deg, $csix 20%, $ctwo)
         color: $cthree
         font-size: 31px
         border-radius: 20px
-        font-weight: bold
+        font-weight: 800
         outline: none
         border: 1px solid $ctwo
         box-shadow: -12px -12px 25px 10px rgba(#FFfffF, 1), 6px 6px 20px 10px rgba($ctwo, 0.3), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
@@ -181,160 +201,36 @@ body
     display: none
 
 
+@media (max-width: 1700px)
+    #textSide
+        #multiple
+            width: 420px
+            flex-direction: column
+            // border: 2px solid red
+            align-items: center
+            div
+                text-align: center
+                // border: 2px solid peru
+                width: 385px
+                justify-content: center
+                .multiple
+                    margin: 30px 15px 0 15px
 
-// h1
-//     background-color: #0069D9
-//     color: white
-//     padding: 20px
-//     border: 3px solid white
-//     border-radius: 20px
-
-// input
-//     border-radius: 5px
-//     border-color: #0069D9
-//     border-bottom: 0px
-//     border-right: 0px
-
-
-
-// .piecesForm
-//     &>div>label
-//         padding-right: 5px
-//         font-weight: 600
-
-// .new-wheel
-//     display: none
-
-// .wheel-type
-//     font-weight: 600
-//     label
-//         margin: 0 5px 10px 5px
-//         input
-//             margin: 0 5px 20px
-
-// .nameInputs
-//     display: flex
-//     margin: 0px auto
-//     width: 80%
-//     max-width: 1100px
-//     padding: 20px
-//     flex-wrap: wrap
-//     justify-content: center
-
-//     div
-//         display: flex
-//         width: 500px
-//         align-items: baseline
-//         justify-content: center
-
-//         label
-//             padding: 0 5px
-
-//         .inputHowMany
-//             width: 45px
-
-// .container2
-//     display: flex
-//     margin-top: 30px
-//     font-weight: 600
-//     justify-content: space-between
-//     min-height: 100vh
-//     width: 1500px
-
-//     .canvasContainer
-//         display: flex
-//         justify-content: center
-//         margin: 20px
-//         position: relative
-
-//         img
-//             width: 80px
-//             height: 20px
-//             position: absolute
-//             top: calc(50% - 10px)
-//             z-index: 5
-
-//         canvas
-//             padding: 20px
-//             background-color: #ccc
-//             transform: rotate(0deg)
-//             transition: 4s
-//             border: 5px dotted black
-//             border-radius: 50%
-
-//     .actual
-//         width: 30%
-//         // border: 2px solid red
-
-//         span
-//             padding-left: 10px
-
-//         .drawnElementsList
-//             list-style: none
-//             font-size: 25px
-
-//             li:first-child
-//                 font-size: 25px
-
-//             li
-//                 border-bottom: 2px solid #0069D9
-//                 padding-top: 10px
-//                 font-size: 15px
-
-// @media (max-width: 1200px)
-//     .container
-//         flex-direction: column
-//         justify-content: flex-start
-
-//         .actual
-//             width: 100%
-
-// @media (max-width: 850px)
-//     .container
-//         .canvasContainer
-//             img
-//                 width: 40px
-
-// @media (max-width: 500px)
-//     h1
-//         color: white
-//         padding: 15px
-//         border: 3px solid white
-//         border-radius: 20px
-//         font-size: 25px
-
-//     .container
-//         .canvasContainer
-//             canvas
-//                 padding: 10px
-//                 background-color: #ccc
-//                 transform: rotate(0deg)
-//                 transition: 4s
-//                 border: 5px dotted black
-//                 border-radius: 50%
-
-//             img
-//                 width: 20px
-
-//         .actual
-//             width: 100%
-//             font-size: 15px
-
-//             h2
-//                 font-size: 20px
-//                 font-weight: 700
-
-//             span
-//                 padding-left: 10px
-
-//             .drawnElementsList
-//                 list-style: none
-//                 font-size: 15px
-
-//                 li:first-child
-//                     font-size: 15px
-
-//                 li
-//                     border-bottom: 2px solid #0069D9
-//                     padding-top: 10px
-//                     font-size: 12px
+@media (max-width: 1400px)
+    #textSide
+        padding-left: 50px
+    #wheelSide
+        background-color: $cthree
+        #wheelContainer
+            #titles
+                left: 150px
+            #wheel
+                margin-top: 420px
+                min-width: 600px
+                min-height: 600px
+                width: 600px
+                heigth: 600px
+                img
+                    position: absolute
+                    top: 271px
+                    left: 560px

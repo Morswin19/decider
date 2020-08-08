@@ -182,3 +182,41 @@ elementCut = () => {
 
 wheelNamesChanged()
 
+// function to fit canvas size
+const canvasSize = () => {
+    if (window.innerWidth < 500) {
+        canvas.setAttribute('width', '250');
+        canvas.setAttribute('height', '250');
+    }
+    else if (window.innerWidth < 800) {
+        canvas.setAttribute('width', '450');
+        canvas.setAttribute('height', '450');
+    }
+    else if (window.innerWidth < 1200) {
+        canvas.setAttribute('width', '750');
+        canvas.setAttribute('height', '750');
+    }
+
+
+    else if (window.innerWidth < 1400) {
+        canvas.setAttribute('width', '600');
+        canvas.setAttribute('height', '600');
+    }
+    else {
+        canvas.setAttribute('width', '750');
+        canvas.setAttribute('height', '750');
+    }
+    // if (piecesSubmit.disabled) {
+    //     if (piecesSubmit.disabled) {
+    //         wheelEngine();
+    //     }
+    // }
+}
+
+window.addEventListener("resize", () => resizeFunction());
+
+const resizeFunction = () => {
+    canvasSize();
+    wheelNamesChanged();
+}
+

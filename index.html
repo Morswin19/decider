@@ -22,19 +22,25 @@
 
 <body>
     <div class="container-fluid">
+        <!-- <div id="backgroundText">
+            <img src="./img/DECIDER.svg" alt="">
+        </div> -->
         <div class="row">
             <div id="wheelSide" class="col-xl-7 p-0 d-flex justify-content-end">
-                <div id="titleContainer" class="d-flex flex-column align-items-center">
-                    <h1 class="pt-5  text-uppercase">Struggling to make
-                        a decision?</h1>
-                    <h5 class="">Enter your options and let the fate decide for you!</h5>
-                    <div id="wheel" class="rounded-circle mt-5">
+                <div id="wheelContainer" class="d-flex flex-column align-items-center">
+                    <div id="titles">
+                        <h1 class="pt-5  text-uppercase">Struggling to make
+                            </br> a decision?</h1>
+                        <h5 class="">Enter your options and let the fate decide for you!</h5>
+
+                    </div>
+                    <div id="wheel" class="rounded-circle">
                         <div class='canvasContainer'>
                             <canvas width="750" height="750"></canvas>
                             <span>
                             </span>
                         </div>
-
+                        <img src="./img/Polygon 2.svg" alt="">
                     </div>
                     <div id="decisions" class="mt-5">
                         <h2 class="text-uppercase nonDisplay">The decision has been made!</h2>
@@ -45,12 +51,6 @@
                         <span>© P. Kalman</span>
                     </footer>
                 </div>
-
-                <div id="backgroundText">
-                    <img src="https://raw.githubusercontent.com/Morswin19/decider/9ddb6f0e0ab3d9fa653261ec30a2d9549f1187a6/img/DECIDER.svg"
-                        alt="">
-                </div>
-
             </div>
             <div id="textSide" class="col-xl-5">
                 <div id="inputsContainer" class="text-center">
@@ -66,17 +66,19 @@
                             <img src="./img/Union 1.svg" alt="">
                             <!-- <i class="fa fa-plus rounded-circle m-auto"></i> -->
                         </div>
-                        <span class="mt-2">Add more</span>
+                        <span class="mt-2 font-weight-bold">Add more</span>
                     </div>
                 </div>
-                <div id="multiple" class="d-flex align-items-baseline">
+                <div id="multiple" class="d-flex">
                     <h5 class="text-uppercase mr-4">Choose one option <span class="font-weight-bold">multiple</span>
                         times?
                     </h5>
-                    <span id="multipleYes" class="multiButton multipleActive rounded-circle">YES</span>
-                    <span id="multipleNo" class="multiButton multipleDisactive rounded-circle">NO</span>
+                    <div class="d-flex">
+                        <div id="multipleYes" class="multiButton multipleActive rounded-circle">YES</div>
+                        <div id="multipleNo" class="multiButton multipleDisactive rounded-circle">NO</div>
+                    </div>
                 </div>
-                <button onclick="handleClick()" id="play" class="btn-lg">let's decide!</button>
+                <button id="play" onclick="handleClick()" class="btn-lg">let’s decide!</button>
             </div>
         </div>
     </div>
