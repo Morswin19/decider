@@ -21,6 +21,9 @@ body
     text-align: left
     position: relative
 
+.container-fluid
+    overflow-x: hidden
+
 #wheelSide
     background-color: $cthree
     // position: relative
@@ -58,7 +61,7 @@ body
             min-width: 750px
             min-height: 750px
             width: 750px
-            heigth: 750px
+            height: 750px
             background-color: $cthree
             box-shadow: -12px -12px 20px 1px rgba(255,255,255,1), 12px 1px 20px 3px rgba(#A2B4C6,0.3)
             border-top: 1px solid white
@@ -113,9 +116,14 @@ body
         // text-align: center
         h1
             font-size: 40px
+            margin-bottom: 40px
         #inputs
+            flex-direction: column
             .option
                 height: 50px
+                margin-bottom: 50px
+                margin-left: 10px
+                margin-right: 10px
                 border-radius: 15px
                 background-color: $cfour
                 text-align: left
@@ -126,35 +134,38 @@ body
                 outline: none
                 &::placeholder
                     color: $cfive
-            .option:focus
-                border: 2px solid $ctwo
+                .option:focus
+                    border: 2px solid $ctwo
+        #addOptionContainer
+            width: 100%
+            min-width: 500px
+            #addOption
+                position: relative
+                font-size: 40px
+                width: 54px
+                height: 54px
+                background: rgba($ctwo, 0.67)
+                color: $cthree
+                border-radius: 50%
+                margin: auto
+                cursor: pointer
+                box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1)
+                &:hover
+                    background: $ctwo
                 
-        #addOption
-            // place-items: center
-            position: relative
-            font-size: 40px
-            width: 54px
-            height: 54px
-            background: rgba($ctwo, 0.67)
-            color: $cthree
-            border-radius: 50%
-            margin: auto
-            cursor: pointer
-            box-shadow: -12px -12px 20px 2px rgba(#FFFEEF, 1), 0px 3px 15px 5px rgba(0,0,0, 0.16), 1px 0px 0px 0px rgba(#FFFEEF, 1) 
-            &:hover
-                background: $ctwo
-           
-            img
-                position: absolute
-                top: 50%
-                left: 50%
-                transform: translateX(-47%) translateY(-47%)
-                box-shadow: -12px -12px 30px 1px rgba(#FFFEEF, 0.5)
+                img
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translateX(-47%) translateY(-47%)
+                    box-shadow: -12px -12px 30px 1px rgba(#FFFEEF, 0.5)
 
     #multiple
         // width: 574px
         margin-top: 112px
         align-items: baseline
+        padding-left: 10px
+        padding-rigth: 10px
         h5
             width: 385px
             font-weight: 600
@@ -229,8 +240,144 @@ body
                 min-width: 600px
                 min-height: 600px
                 width: 600px
-                heigth: 600px
+                height: 600px
                 img
                     position: absolute
                     top: 271px
                     left: 560px
+
+@media (max-width: 1200px)
+    #textSide
+        order: 1
+        padding-left: 0px
+        text-align: center
+        #inputsContainer
+            margin-top: 250px
+            margin-left: auto
+            margin-right: auto
+            width: 90%
+            h1
+                font-size: 30px
+            #inputs
+                width: 100%
+                flex-direction: row
+                justify-content: space-around
+                flex-wrap: wrap
+                .option
+                    width: 300px
+        #multiple
+            width: 100%
+            margin-top: 40px
+            align-items: center
+
+        #play
+            border: 1px solid $ctwo
+            width: 292px
+            height: 103px
+            margin-top: 60px
+            margin-bottom: -50px
+            margin-left: 0px
+            background: linear-gradient(45deg, $csix 20%, $ctwo)
+            color: $cthree
+            font-size: 31px
+            border-radius: 20px
+            font-weight: 800
+            outline: none
+            border: 1px solid $ctwo
+
+    #wheelSide
+        position: static
+        order: 2
+        #wheelContainer
+            position: static
+            #titles
+                top: 0px
+                margin: 0
+                width: 100%
+                left: 0
+                text-align: center
+                h1
+                    font-size: 45px
+                    margin: 0
+                    width: 100%
+                    text-align: center
+                h5
+                    width: 100%
+                    font-size: 16px
+                    text-align: center
+            #wheel
+                margin-top: 100px
+                // margin-bottom: 50px
+                min-width: 600px
+                min-height: 600px
+                width: 600px
+                height: 600px
+                img
+                    position: absolute
+                    top: 270px
+                    left: 550px
+
+@media (max-width: 700px)
+    #textSide
+        #inputsContainer
+            margin-top: 300px
+            h1
+                margin-bottom: 25px
+                font-size: 25px
+            #inputs
+                .option
+                    margin-bottom: 25px
+            #addOptionContainer
+                width: 100%
+                min-width: 60px
+        #play
+            font-size: 25px
+            width: 200px
+            height: 70px
+        #multiple
+            h5
+                width: 100%
+                text-align: center
+                margin-right: 0
+    #wheelSide
+        #wheelContainer
+            #wheel
+                margin-top: 80px
+                // margin-bottom: 50px
+                min-width: 450px
+                min-height: 450px
+                width: 450px
+                height: 450px
+                img
+                    position: absolute
+                    top: 195px
+                    left: 380px   
+                    transform: scale(0.7)
+
+@media (max-width: 500px)
+    #textSide
+        #inputsContainer
+            margin-top: 250px
+            #addOptionContainer
+                width: 100%
+                min-width: 60px
+    #wheelSide
+        #wheelContainer
+            #titles
+                padding-left: 10px
+                padding-right: 10px
+                h1
+                    font-size: 35px
+            #wheel
+                // margin-top: 100px
+                // margin-bottom: 50px
+                min-width: 250px
+                min-height: 250px
+                width: 250px
+                height: 250px
+                img
+                    position: absolute
+                    top: 95px
+                    left: 180px   
+                    transform: scale(0.4)
+

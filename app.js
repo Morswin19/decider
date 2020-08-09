@@ -184,17 +184,17 @@ wheelNamesChanged()
 
 // function to fit canvas size
 const canvasSize = () => {
-    if (window.innerWidth < 500) {
+    if (document.body.clientWidth < 500) {
         canvas.setAttribute('width', '250');
         canvas.setAttribute('height', '250');
     }
-    else if (window.innerWidth < 800) {
+    else if (window.innerWidth < 700) {
         canvas.setAttribute('width', '450');
         canvas.setAttribute('height', '450');
     }
     else if (window.innerWidth < 1200) {
-        canvas.setAttribute('width', '750');
-        canvas.setAttribute('height', '750');
+        canvas.setAttribute('width', '600');
+        canvas.setAttribute('height', '600');
     }
 
 
@@ -219,4 +219,6 @@ const resizeFunction = () => {
     canvasSize();
     wheelNamesChanged();
 }
+
+resizeFunction()
 

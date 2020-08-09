@@ -54,23 +54,23 @@
             </div>
             <div id="textSide" class="col-xl-5">
                 <div id="inputsContainer" class="text-center">
-                    <h1 class="text-uppercase font-weight-bold mb-5">Choose between:</h1>
-                    <div class="d-flex flex-md-column">
-                        <div id="inputs" class="d-flex flex-column">
-                            <input class="option mb-5" onblur="wheelNamesChanged()" type="text"
-                                placeholder='enter option 1'>
-                            <input class="option mb-5" onblur="wheelNamesChanged()" type="text"
-                                placeholder='enter option 2'>
+                    <h1 class="text-uppercase font-weight-bold">Choose between:</h1>
+                    <div class="d-flex flex-column">
+                        <div id="inputs" class="d-flex">
+                            <input class="option" onblur="wheelNamesChanged()" type="text" placeholder='enter option 1'>
+                            <input class="option" onblur="wheelNamesChanged()" type="text" placeholder='enter option 2'>
                         </div>
-                        <div id="addOption" onclick="addOptionClick()">
-                            <img src="./img/Union 1.svg" alt="">
-                            <!-- <i class="fa fa-plus rounded-circle m-auto"></i> -->
+                        <div id="addOptionContainer">
+                            <div id="addOption" onclick="addOptionClick()">
+                                <img src="./img/Union 1.svg" alt="">
+                                <!-- <i class="fa fa-plus rounded-circle m-auto"></i> -->
+                            </div>
+                            <span class="mt-2 font-weight-bold">Add more</span>
                         </div>
-                        <span class="mt-2 font-weight-bold">Add more</span>
                     </div>
                 </div>
                 <div id="multiple" class="d-flex">
-                    <h5 class="text-uppercase mr-4">Choose one option <span class="font-weight-bold">multiple</span>
+                    <h5 class="text-uppercase">Choose one option <span class="font-weight-bold">multiple</span>
                         times?
                     </h5>
                     <div class="d-flex">
