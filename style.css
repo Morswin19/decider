@@ -36,6 +36,7 @@ body {
   width: 100%;
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
+  opacity: 0.5;
 }
 
 #wheelSide {
@@ -205,7 +206,7 @@ body {
   color: #A2B4C6;
 }
 
-#textSide #inputsContainer #inputs .option .option:focus {
+#textSide #inputsContainer #inputs .option:focus {
   border: 2px solid #726B00;
 }
 
@@ -294,8 +295,8 @@ body {
   font-weight: 800;
   outline: none;
   border: 1px solid #726B00;
-  -webkit-box-shadow: -12px -12px 25px 10px white, 6px 6px 20px 10px rgba(114, 107, 0, 0.3), 1px 0px 0px 0px #fffeef;
-          box-shadow: -12px -12px 25px 10px white, 6px 6px 20px 10px rgba(114, 107, 0, 0.3), 1px 0px 0px 0px #fffeef;
+  -webkit-box-shadow: -12px -12px 25px 10px rgba(255, 255, 255, 0.8), 6px 6px 20px 10px rgba(114, 107, 0, 0.3), 1px 0px 0px 0px #fffeef;
+          box-shadow: -12px -12px 25px 10px rgba(255, 255, 255, 0.8), 6px 6px 20px 10px rgba(114, 107, 0, 0.3), 1px 0px 0px 0px #fffeef;
 }
 
 #textSide #play:hover {
