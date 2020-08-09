@@ -1,7 +1,7 @@
 {
-    "short_name": "Weather",
-    "name": "Weather: Do I need an umbrella?",
-    "description": "Weather forecast information",
+    "short_name": "Decider",
+    "name": "Decider",
+    "description": "Decider",
     "icons": [
         {
             "src": "/images/icons-192.png",
