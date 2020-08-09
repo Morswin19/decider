@@ -130,7 +130,8 @@ body {
 
 #wheelSide #wheelContainer #decisions ul li {
   font-size: 20px;
-  margin-left: 200px;
+  margin-left: 20px;
+  text-align: left;
 }
 
 #wheelSide #wheelContainer #decisions ul li:first-child {
@@ -465,13 +466,13 @@ body {
   #wheelSide #wheelContainer #decisions {
     width: 100%;
     margin-left: 0px;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
+    -ms-flex-item-align: left;
+        -ms-grid-row-align: left;
+        align-self: left;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    text-align: left;
   }
   #wheelSide #wheelContainer #decisions h2 {
     text-align: center;
