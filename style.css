@@ -19,6 +19,18 @@ body {
   overflow-x: hidden;
 }
 
+#backgroundText {
+  position: absolute;
+  top: -8vw;
+  left: 0px;
+  z-index: 5;
+  margin: 0;
+}
+
+#backgroundText img {
+  width: 100%;
+}
+
 #wheelSide {
   background-color: #F7F9FC;
 }
@@ -128,17 +140,6 @@ body {
   margin-top: 100px;
   margin-bottom: 20px;
   text-align: left;
-}
-
-#backgroundText {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 5;
-}
-
-#backgroundText img {
-  width: 100%;
 }
 
 #textSide {
