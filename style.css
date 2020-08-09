@@ -87,14 +87,32 @@ body {
 
 #wheelSide #wheelContainer #decisions {
   width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 220px;
+  font-size: 40px;
 }
 
 #wheelSide #wheelContainer #decisions h2 {
-  text-decoration: underline;
+  margin-top: 50px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#wheelSide #wheelContainer #decisions ul {
+  list-style: none;
 }
 
 #wheelSide #wheelContainer #decisions ul li {
   font-size: 20px;
+  margin-left: 200px;
 }
 
 #wheelSide #wheelContainer #decisions ul li:first-child {
@@ -103,9 +121,13 @@ body {
 }
 
 #wheelSide #wheelContainer footer {
-  width: 1000px;
-  text-align: left;
+  width: 100%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 220px;
   margin-top: 100px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 #backgroundText {
@@ -322,6 +344,12 @@ body {
     top: 271px;
     left: 560px;
   }
+  #wheelSide #wheelContainer #decisions {
+    margin-left: 150px;
+  }
+  #wheelSide #wheelContainer footer {
+    margin-left: 150px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -416,6 +444,27 @@ body {
     top: 270px;
     left: 550px;
   }
+  #wheelSide #wheelContainer #decisions {
+    width: 100%;
+    margin-left: 0px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #wheelSide #wheelContainer #decisions h2 {
+    text-align: center;
+  }
+  #wheelSide #wheelContainer #decisions ul li {
+    margin: 0;
+  }
+  #wheelSide #wheelContainer footer {
+    margin-left: 0px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {
@@ -456,6 +505,9 @@ body {
     left: 380px;
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+  }
+  #wheelSide #wheelContainer #decisions h2 {
+    font-size: 25px;
   }
 }
 
