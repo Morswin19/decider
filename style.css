@@ -286,7 +286,7 @@ body {
   margin-top: 103px;
   margin-bottom: 100px;
   margin-left: 70px;
-  background: #9F9A53;
+  background: linear-gradient(45deg, #9F9A53 20%, #726B00);
   color: #F7F9FC;
   font-size: 31px;
   border-radius: 20px;
@@ -374,13 +374,15 @@ body {
     text-align: center;
   }
   #textSide #inputsContainer {
-    margin-top: 300px;
+    margin-top: 330px;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
   }
   #textSide #inputsContainer h1 {
     font-size: 30px;
+    text-align: left;
+    margin-left: 25px;
   }
   #textSide #inputsContainer #inputs {
     width: 100%;
@@ -399,16 +401,18 @@ body {
   #textSide #multiple {
     width: 100%;
     margin-top: 90px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  }
+  #textSide #multiple h5 {
+    text-align: left;
+    width: 100%;
+    margin-left: 40px;
   }
   #textSide #play {
     border: 1px solid #726B00;
     width: 292px;
     height: 103px;
     margin-top: 110px;
-    margin-bottom: -50px;
+    margin-bottom: 30px;
     margin-left: 0px;
     color: #F7F9FC;
     font-size: 31px;
@@ -429,23 +433,25 @@ body {
   #wheelSide #wheelContainer #titles {
     top: 0px;
     margin: 0;
+    margin-left: 20px;
     width: 100%;
     left: 0;
-    text-align: center;
+    text-align: left;
   }
   #wheelSide #wheelContainer #titles h1 {
     font-size: 60px;
     margin: 0;
+    margin-bottom: 20px;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
   #wheelSide #wheelContainer #titles h5 {
-    width: 100%;
+    width: 80%;
     font-size: 24px;
-    text-align: center;
+    text-align: left;
   }
   #wheelSide #wheelContainer #wheel {
-    margin-top: 100px;
+    margin-top: 50px;
     min-width: 600px;
     min-height: 600px;
     width: 600px;
@@ -484,7 +490,7 @@ body {
     margin-top: 300px;
   }
   #textSide #inputsContainer h1 {
-    margin-bottom: 25px;
+    margin-bottom: 45px;
     font-size: 25px;
   }
   #textSide #inputsContainer #inputs .option {
@@ -501,11 +507,10 @@ body {
   }
   #textSide #multiple h5 {
     width: 100%;
-    text-align: center;
     margin-right: 0;
   }
   #wheelSide #wheelContainer #wheel {
-    margin-top: 120px;
+    margin-top: 70px;
     min-width: 450px;
     min-height: 450px;
     width: 450px;
@@ -531,7 +536,7 @@ body {
 
 @media (max-width: 500px) {
   #textSide #inputsContainer {
-    margin-top: 250px;
+    margin-top: 300px;
   }
   #textSide #inputsContainer #addOptionContainer {
     width: 100%;

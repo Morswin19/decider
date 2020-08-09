@@ -184,7 +184,7 @@ wheelNamesChanged()
 
 // function to fit canvas size
 const canvasSize = () => {
-    if (window.innerWidth < 500) {
+    if (window.innerWidth <= 500) {
         canvas.setAttribute('width', '250');
         canvas.setAttribute('height', '250');
     }
