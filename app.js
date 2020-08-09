@@ -19,9 +19,9 @@ let multiple = true;
 const wheelEngine = () => {
     // console.log('hello Guinea pig')
     if (wheelNames.length % 10 == 1) {
-        color = ['#f40552', '#c3edea', '#fc7e2f', '#f8f3eb', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#f4eeff', '#ffd868', '#baf1a1'];
+        color = ['#9F9A53', '#034f84', '#6b5b95', '#d64161', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#c1946a', '#ffd868', '#baf1a1'];
     } else {
-        color = ['#f40552', '#c3edea', '#fc7e2f', '#f8f3eb', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#f4eeff', '#ffd868'];
+        color = ['#9F9A53', '#034f84', '#6b5b95', '#d64161', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#c1946a', '#ffd868'];
     }
     const slices = wheelNames.length;
     const sliceDeg = 360 / slices;
@@ -49,7 +49,7 @@ const wheelEngine = () => {
         ctx.translate(center, center);
         ctx.rotate(deg2rad(deg));
         ctx.textAlign = "left";
-        ctx.fillStyle = "#003f8a";
+        ctx.fillStyle = "#F7F9FC";
         if (window.innerWidth < 500) {
             ctx.font = 'bold 15px lato';
             ctx.fillText(text, 40, 4);
