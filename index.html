@@ -21,64 +21,68 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div id="backgroundText">
-            <img src="./img/DECIDER.svg" alt="">
-        </div>
-        <div class="row">
-            <div id="wheelSide" class="col-xl-7 p-0 d-flex justify-content-end">
-                <div id="wheelContainer" class="d-flex flex-column align-items-center">
-                    <div id="titles">
-                        <h1 class="pt-5  text-uppercase">Struggling to make
-                            </br> a decision?</h1>
-                        <h5 class="">Enter your options and let the fate decide for you!</h5>
-
-                    </div>
-                    <div id="wheel" class="rounded-circle">
-                        <div class='canvasContainer'>
-                            <canvas width="750" height="750"></canvas>
-                            <span>
-                            </span>
-                        </div>
-                        <img src="./img/Polygon 2.svg" alt="">
-                    </div>
-                    <div id="decisions" class="d-flex mt-5">
-                        <h2 class="text-uppercase nonDisplay">The decision has been made!</h2>
-                        <ul id="decisionsMade">
-                        </ul>
-                    </div>
-                    <footer>
-                        <span>© P. Kalman</span>
-                    </footer>
-                </div>
+    <div id="wrapper">
+        <div class="container-fluid">
+            <div id="backgroundText">
+                <img src="./img/DECIDER.svg" alt="">
             </div>
-            <div id="textSide" class="col-xl-5">
-                <div id="inputsContainer" class="text-center">
-                    <h1 class="text-uppercase font-weight-bold">Choose between:</h1>
-                    <div class="d-flex flex-column">
-                        <div id="inputs" class="d-flex">
-                            <input class="option" onblur="wheelNamesChanged()" type="text" placeholder='enter option 1'>
-                            <input class="option" onblur="wheelNamesChanged()" type="text" placeholder='enter option 2'>
+            <div class="row">
+                <div id="wheelSide" class="col-xl-7 p-0 d-flex justify-content-end">
+                    <div id="wheelContainer" class="d-flex flex-column align-items-center">
+                        <div id="titles">
+                            <h1 class="pt-5  text-uppercase">Struggling to make
+                                </br> a decision?</h1>
+                            <h5 class="">Enter your options and let the fate decide for you!</h5>
+
                         </div>
-                        <div id="addOptionContainer">
-                            <div id="addOption" onclick="addOptionClick()">
-                                <img src="./img/Union 1.svg" alt="">
-                                <!-- <i class="fa fa-plus rounded-circle m-auto"></i> -->
+                        <div id="wheel" class="rounded-circle">
+                            <div class='canvasContainer'>
+                                <canvas width="750" height="750"></canvas>
+                                <span>
+                                </span>
                             </div>
-                            <span class="mt-2 font-weight-bold">Add more</span>
+                            <img src="./img/Polygon 2.svg" alt="">
+                        </div>
+                        <div id="decisions" class="d-flex mt-5">
+                            <h2 class="text-uppercase nonDisplay">The decision has been made!</h2>
+                            <ul id="decisionsMade">
+                            </ul>
+                        </div>
+                        <footer>
+                            <span>© P. Kalman</span>
+                        </footer>
+                    </div>
+                </div>
+                <div id="textSide" class="col-xl-5">
+                    <div id="inputsContainer" class="text-center">
+                        <h1 class="text-uppercase font-weight-bold">Choose between:</h1>
+                        <div class="d-flex flex-column">
+                            <div id="inputs" class="d-flex">
+                                <input class="option" onblur="wheelNamesChanged()" type="text"
+                                    placeholder='enter option 1'>
+                                <input class="option" onblur="wheelNamesChanged()" type="text"
+                                    placeholder='enter option 2'>
+                            </div>
+                            <div id="addOptionContainer">
+                                <div id="addOption" onclick="addOptionClick()">
+                                    <img src="./img/Union 1.svg" alt="">
+                                    <!-- <i class="fa fa-plus rounded-circle m-auto"></i> -->
+                                </div>
+                                <span class="mt-2 font-weight-bold">Add more</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="multiple" class="d-flex">
-                    <h5 class="text-uppercase">Choose one option <span class="font-weight-bold">multiple</span>
-                        times?
-                    </h5>
-                    <div class="d-flex">
-                        <div id="multipleYes" class="multiButton multipleActive rounded-circle">YES</div>
-                        <div id="multipleNo" class="multiButton multipleDisactive rounded-circle">NO</div>
+                    <div id="multiple" class="d-flex">
+                        <h5 class="text-uppercase">Choose one option <span class="font-weight-bold">multiple</span>
+                            times?
+                        </h5>
+                        <div class="d-flex">
+                            <div id="multipleYes" class="multiButton multipleActive rounded-circle">YES</div>
+                            <div id="multipleNo" class="multiButton multipleDisactive rounded-circle">NO</div>
+                        </div>
                     </div>
+                    <button id="play" onclick="handleClick()" class="btn-lg">let’s decide!</button>
                 </div>
-                <button id="play" onclick="handleClick()" class="btn-lg">let’s decide!</button>
             </div>
         </div>
     </div>
