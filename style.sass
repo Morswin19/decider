@@ -35,7 +35,7 @@ body
     z-index: 5
     margin: 0
     img
-        width: 100%
+        width: 1920px
         transform: scale(1.01)
         opacity: 0.5
 
@@ -73,9 +73,9 @@ body
             width: 750px
             height: 750px
             background-color: $cthree
-            box-shadow: -12px -12px 10px 3px rgb(255,255,255), 12px 1px 10px 3px rgba(#A2B4C6,0.6)
-            border-top: 1px solid white
-            border-left: 1px solid white
+            box-shadow: -10px -12px 6px 3px white, 12px 0px 10px 3px rgba(0,0,0,0.15)
+            // border-top: 2px solid white
+            // border-left: 2px solid white
             position: relative
             .canvasContainer
                 display: flex
@@ -212,7 +212,8 @@ body
         margin-top: 103px
         margin-bottom: 100px
         margin-left: 70px
-        background: linear-gradient(45deg, $csix 20%, $ctwo)
+        // background: linear-gradient(45deg, $csix 20%, $ctwo)
+        background: $csix
         color: $cthree
         font-size: 31px
         border-radius: 20px
@@ -268,12 +269,17 @@ body
                 margin-left: 150px
 
 @media (max-width: 1200px)
+    #backgroundText
+        img
+            width: 1200px
+            transform: scale(1.01)
+            opacity: 0.5
     #textSide
         order: 1
         padding-left: 0px
         text-align: center
         #inputsContainer
-            margin-top: 250px
+            margin-top: 300px
             margin-left: auto
             margin-right: auto
             width: 90%
@@ -288,17 +294,16 @@ body
                     width: 300px
         #multiple
             width: 100%
-            margin-top: 40px
+            margin-top: 90px
             align-items: center
 
         #play
             border: 1px solid $ctwo
             width: 292px
             height: 103px
-            margin-top: 60px
+            margin-top: 110px
             margin-bottom: -50px
             margin-left: 0px
-            background: linear-gradient(45deg, $csix 20%, $ctwo)
             color: $cthree
             font-size: 31px
             border-radius: 20px
@@ -318,13 +323,13 @@ body
                 left: 0
                 text-align: center
                 h1
-                    font-size: 45px
+                    font-size: 60px
                     margin: 0
                     width: 100%
                     text-align: center
                 h5
                     width: 100%
-                    font-size: 16px
+                    font-size: 24px
                     text-align: center
             #wheel
                 margin-top: 100px
@@ -378,7 +383,7 @@ body
     #wheelSide
         #wheelContainer
             #wheel
-                margin-top: 80px
+                margin-top: 120px
                 // margin-bottom: 50px
                 min-width: 450px
                 min-height: 450px
@@ -392,6 +397,11 @@ body
             #decisions
                 h2
                     font-size: 25px
+            #titles
+                h1
+                    font-size: 45px
+                h5
+                    font-size: 16px
 
 @media (max-width: 500px)
     #textSide

@@ -33,7 +33,7 @@ body {
 }
 
 #backgroundText img {
-  width: 100%;
+  width: 1920px;
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
   opacity: 0.5;
@@ -75,10 +75,8 @@ body {
   width: 750px;
   height: 750px;
   background-color: #F7F9FC;
-  -webkit-box-shadow: -12px -12px 10px 3px white, 12px 1px 10px 3px rgba(162, 180, 198, 0.6);
-          box-shadow: -12px -12px 10px 3px white, 12px 1px 10px 3px rgba(162, 180, 198, 0.6);
-  border-top: 1px solid white;
-  border-left: 1px solid white;
+  -webkit-box-shadow: -10px -12px 6px 3px white, 12px 0px 10px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: -10px -12px 6px 3px white, 12px 0px 10px 3px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
@@ -288,7 +286,7 @@ body {
   margin-top: 103px;
   margin-bottom: 100px;
   margin-left: 70px;
-  background: linear-gradient(45deg, #9F9A53 20%, #726B00);
+  background: #9F9A53;
   color: #F7F9FC;
   font-size: 31px;
   border-radius: 20px;
@@ -362,6 +360,12 @@ body {
 }
 
 @media (max-width: 1200px) {
+  #backgroundText img {
+    width: 1200px;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+    opacity: 0.5;
+  }
   #textSide {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -370,7 +374,7 @@ body {
     text-align: center;
   }
   #textSide #inputsContainer {
-    margin-top: 250px;
+    margin-top: 300px;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -394,7 +398,7 @@ body {
   }
   #textSide #multiple {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 90px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -403,10 +407,9 @@ body {
     border: 1px solid #726B00;
     width: 292px;
     height: 103px;
-    margin-top: 60px;
+    margin-top: 110px;
     margin-bottom: -50px;
     margin-left: 0px;
-    background: linear-gradient(45deg, #9F9A53 20%, #726B00);
     color: #F7F9FC;
     font-size: 31px;
     border-radius: 20px;
@@ -431,14 +434,14 @@ body {
     text-align: center;
   }
   #wheelSide #wheelContainer #titles h1 {
-    font-size: 45px;
+    font-size: 60px;
     margin: 0;
     width: 100%;
     text-align: center;
   }
   #wheelSide #wheelContainer #titles h5 {
     width: 100%;
-    font-size: 16px;
+    font-size: 24px;
     text-align: center;
   }
   #wheelSide #wheelContainer #wheel {
@@ -502,7 +505,7 @@ body {
     margin-right: 0;
   }
   #wheelSide #wheelContainer #wheel {
-    margin-top: 80px;
+    margin-top: 120px;
     min-width: 450px;
     min-height: 450px;
     width: 450px;
@@ -517,6 +520,12 @@ body {
   }
   #wheelSide #wheelContainer #decisions h2 {
     font-size: 25px;
+  }
+  #wheelSide #wheelContainer #titles h1 {
+    font-size: 45px;
+  }
+  #wheelSide #wheelContainer #titles h5 {
+    font-size: 16px;
   }
 }
 
