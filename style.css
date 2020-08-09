@@ -26,7 +26,7 @@ body {
 
 #backgroundText {
   position: absolute;
-  top: -8vw;
+  top: 0px;
   left: 0px;
   z-index: 5;
   margin: 0;
@@ -34,8 +34,8 @@ body {
 
 #backgroundText img {
   width: 100%;
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 #wheelSide {
@@ -58,7 +58,7 @@ body {
   font-size: 90px;
   font-weight: 900;
   text-align: left;
-  margin-top: 65px;
+  margin-top: 80px;
 }
 
 #wheelSide #wheelContainer #titles h5 {
