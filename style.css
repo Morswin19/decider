@@ -29,6 +29,8 @@ body {
 
 #backgroundText img {
   width: 100%;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 #wheelSide {
