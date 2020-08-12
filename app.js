@@ -18,10 +18,12 @@ let multiple = true;
 //construct wheel in canvas
 const wheelEngine = () => {
     // console.log('hello Guinea pig')
-    if (wheelNames.length % 10 == 1) {
-        color = ['#EAE9D9', '#F7F9FC', '#6b5b95', '#d64161', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#c1946a', '#ffd868', '#baf1a1'];
+    if (wheelNames.length % 2 == 0) {
+        color = ['#EAE9D9', '#F7F9FC'];
+    } else if (wheelNames.length % 3 == 0 || wheelNames.length % 5 == 0) {
+        color = ['#EAE9D9', '#F7F9FC', '#6b5b95'];
     } else {
-        color = ['#EAE9D9', '#F7F9FC', '#6b5b95', '#d64161', '#6886c5', '#ffacb7', '#ffe0ac', '#43d8c9', '#c1946a', '#ffd868'];
+        color = ['#EAE9D9', '#F7F9FC', '#6b5b95', '#cffffe', '#efbbcf', "#eeeeee", "#cff6cf"];
     }
     const slices = wheelNames.length;
     const sliceDeg = 360 / slices;
@@ -86,19 +88,6 @@ const wheelEngine = () => {
         showDrawnElementsList()
     }
 }
-
-// showDrawnElementsList = () => {
-//     decisionsMadeTitle.classList.remove('nonDisplay');
-//     const listElements = decisionsMadeList.querySelectorAll('li');
-//     if (listElements.length > 0) {
-//         listElements.forEach(element => element.remove());
-//     }
-//     for (i = 0; i < drawnElements.length; i++) {
-//         const li = document.createElement('li');
-//         li.innerHTML = drawnElements[i];
-//         decisionsMadeList.appendChild(li);
-//     }
-// }
 
 const addOptionClick = () => {
     const input = document.createElement('input');
