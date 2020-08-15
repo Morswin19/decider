@@ -102,6 +102,7 @@ const addOptionClick = () => {
 };
 
 const handleClick = () => {
+    window.removeEventListener("keydown", enterEventFunc)
     const deg = Math.floor(Math.random() * 3600);
     if (deg < 720) {
         return handleClick();
@@ -120,11 +121,9 @@ const handleClick = () => {
         setTimeout(() => elementCut(), 7000);
     } else {
         setTimeout(() => {
-            // (startWheel.removeAttribute('disabled'));
             play.removeAttribute('disabled');
             wheelEngine();
-            // startCount++;
-            // countSpan.innerHTML = `(${startCount})`;
+            window.addEventListener("keydown", enterEventFunc)
         }, 5000)
     }
 }
@@ -165,6 +164,7 @@ elementCut = () => {
     wheelNames.splice(index, 1);
     // startCount++;
     // countSpan.innerHTML = `(${startCount})`;
+    window.addEventListener("keydown", enterEventFunc)
     wheelEngine();
 }
 
@@ -195,11 +195,6 @@ const canvasSize = () => {
         canvas.setAttribute('width', '750');
         canvas.setAttribute('height', '750');
     }
-    // if (piecesSubmit.disabled) {
-    //     if (piecesSubmit.disabled) {
-    //         wheelEngine();
-    //     }
-    // }
 }
 
 window.addEventListener("resize", () => resizeFunction());
@@ -210,4 +205,13 @@ const resizeFunction = () => {
 }
 
 resizeFunction()
+
+const enterEventFunc = (e) => {
+    if (e.keyCode === 13) {
+        handleClick();
+    };
+}
+
+window.addEventListener("keydown", enterEventFunc)
+
 
