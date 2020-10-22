@@ -476,6 +476,7 @@ body {
   }
   #wheelSide #wheelContainer #decisions h2 {
     text-align: center;
+    margin-left: 40px;
   }
   #wheelSide #wheelContainer #decisions ul li {
     margin: 0;

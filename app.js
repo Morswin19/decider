@@ -17,7 +17,6 @@ let multiple = true;
 
 //construct wheel in canvas
 const wheelEngine = () => {
-    // console.log('hello Guinea pig')
     if (wheelNames.length % 2 == 0) {
         color = ['#EAE9D9', '#F7F9FC'];
     } else if (wheelNames.length % 3 == 0 || wheelNames.length % 5 == 0) {
@@ -43,9 +42,6 @@ const wheelEngine = () => {
         ctx.fill();
     }
 
-    if (window.innerWidth > '850px') {
-
-    }
     function drawText(deg, text) {
         ctx.save();
         ctx.translate(center, center);
@@ -83,7 +79,6 @@ const wheelEngine = () => {
             decisionsMadeList.appendChild(li);
         }
     }
-
     if (drawnElements.length > 0) {
         showDrawnElementsList()
     }
@@ -96,11 +91,11 @@ const addOptionClick = () => {
     input.onfocus = function (e) { e.target.classList.add('optionActive') }
     input.onblur = function (e) { wheelNamesChanged(e) };
     inputs.appendChild(input);
-    // optionsArray = [...document.querySelectorAll(".option")];
     wheelNamesChanged()
-    wheelEngine()
+    // wheelEngine()
 };
 
+//handle click to start the wheel
 const handleClick = () => {
     window.removeEventListener("keydown", enterEventFunc)
     const deg = Math.floor(Math.random() * 3600);
@@ -155,6 +150,7 @@ const multipleClick = (e) => {
     }
 }
 
+//func to remove drawn option
 elementCut = () => {
     play.removeAttribute('disabled')
     let degLeft = wheelDeg % 360;
@@ -162,12 +158,9 @@ elementCut = () => {
     const nameToCut = wheelNames.filter((name, index) => (index * oneSlice < (360 - degLeft)) && ((index + 1) * oneSlice >= (360 - degLeft)))
     const index = wheelNames.indexOf(nameToCut[0]);
     wheelNames.splice(index, 1);
-    // startCount++;
-    // countSpan.innerHTML = `(${startCount})`;
     window.addEventListener("keydown", enterEventFunc)
     wheelEngine();
 }
-
 
 wheelNamesChanged()
 
@@ -185,8 +178,6 @@ const canvasSize = () => {
         canvas.setAttribute('width', '600');
         canvas.setAttribute('height', '600');
     }
-
-
     else if (window.innerWidth < 1400) {
         canvas.setAttribute('width', '600');
         canvas.setAttribute('height', '600');
@@ -197,6 +188,7 @@ const canvasSize = () => {
     }
 }
 
+//func to change canvas size when window is resize
 window.addEventListener("resize", () => resizeFunction());
 
 const resizeFunction = () => {
@@ -206,6 +198,7 @@ const resizeFunction = () => {
 
 resizeFunction()
 
+//add event listener to start the wheel whith enter key press
 const enterEventFunc = (e) => {
     if (e.keyCode === 13) {
         handleClick();
