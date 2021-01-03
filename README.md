@@ -22,7 +22,6 @@
     CSS3
     sass
     font-awesome
-    web browser local storage
 
 ## Sections
 
