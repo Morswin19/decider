@@ -1,4 +1,4 @@
-# PIOTR KALMAN - Yslider
+# PIOTR KALMAN - Decider
 
 ## General Info
 
