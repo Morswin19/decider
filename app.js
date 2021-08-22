@@ -94,15 +94,15 @@ const addOptionClick = () => {
     input.onblur = function (e) { wheelNamesChanged(e) };
     inputs.appendChild(input);
     wheelNamesChanged()
-    // wheelEngine()
+    input.focus()
 };
 
 //handle click to start the wheel
-const handleClick = () => {
+const startWheel = () => {
     window.removeEventListener("keydown", enterEventFunc)
     const deg = Math.floor(Math.random() * 3600);
     if (deg < 720) {
-        return handleClick();
+        return startWheel();
     }
     wheelDeg = wheelDeg + deg
     const canvas = document.querySelector('canvas')
@@ -128,9 +128,7 @@ const handleClick = () => {
 const wheelNamesChanged = () => {
     optionsArray = [...document.querySelectorAll(".option")];
     wheelNames = [];
-    for (i = 0; i < optionsArray.length; i++) {
-        wheelNames.push(optionsArray[i].value)
-    }
+    optionsArray.map((option) => wheelNames.push(option.value));
     wheelEngine()
 }
 
@@ -203,10 +201,21 @@ resizeFunction()
 //add event listener to start the wheel whith enter key press
 const enterEventFunc = (e) => {
     if (e.keyCode === 13) {
-        handleClick();
+        startWheel();
     };
 }
 
-window.addEventListener("keydown", enterEventFunc)
+const tabEventFunc = (e) => {
+    if (e.keyCode === 9){
+        console.log(optionsArray);
+        //if option array have '' values, we go to that '' value, we don't create another element
+        let checkOptionArrayValues = optionsArray.filter(option => !option.value)
+        checkOptionArrayValues.length == 0 ? addOptionClick() : checkOptionArrayValues[0].focus();
 
+        // addOptionClick();
+    }
+}
+
+window.addEventListener("keydown", enterEventFunc)
+window.addEventListener('keyup', tabEventFunc)
 
