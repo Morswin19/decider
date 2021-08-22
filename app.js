@@ -101,7 +101,7 @@ const addOptionClick = () => {
 const startWheel = () => {
     window.removeEventListener("keydown", enterEventFunc)
     const deg = Math.floor(Math.random() * 3600);
-    if (deg < 720) {
+    if (deg < 1440) {
         return startWheel();
     }
     wheelDeg = wheelDeg + deg
@@ -123,6 +123,7 @@ const startWheel = () => {
             window.addEventListener("keydown", enterEventFunc)
         }, 5000)
     }
+    canvas.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 }
 
 const wheelNamesChanged = () => {
