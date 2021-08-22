@@ -19,10 +19,12 @@ let multiple = true;
 const wheelEngine = () => {
     if (wheelNames.length % 2 == 0) {
         color = ['#EAE9D9', '#F7F9FC'];
-    } else if (wheelNames.length % 3 == 0 || wheelNames.length % 5 == 0) {
-        color = ['#EAE9D9', '#F7F9FC', '#6b5b95'];
+    } else if (wheelNames.length % 3 == 0) {
+        color = ['#EAE9D9', '#F7F9FC', '#FFEDDA'];
+    } else if (wheelNames.length % 5 == 0){
+        color = ['#EAE9D9', '#F7F9FC', '#FFEDDA', '#EEEEEE', '#FFE3E3']
     } else {
-        color = ['#EAE9D9', '#F7F9FC', '#6b5b95', '#cffffe', '#efbbcf', "#eeeeee", "#cff6cf"];
+        color = ['#EAE9D9', '#F7F9FC', '#FFEDDA', "#eeeeee", "#F1ECC3", '#FFE3E3', '#FDF6F0'];
     }
     const slices = wheelNames.length;
     const sliceDeg = 360 / slices;
